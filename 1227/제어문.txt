@@ -1,0 +1,17 @@
+제어문
+1. 조건문
+ 1)if(조건)
+ 2)if(조건1) eles (조건2)
+ 3)if(조건1) eles (조건2) eles (조건3)
+
+	var n=1;
+	if(n==1){ //값이 같은지 비교한다.
+	document.write('참'); //참으로 결과를 도출한다.
+      if(n===1){
+	document.wrtie('참');
+	}eles{
+	document.write('거짓');
+	}
+2.선택문-정확하게 값이 일치하는 경우에만 실행
+switch(값)
+case.
