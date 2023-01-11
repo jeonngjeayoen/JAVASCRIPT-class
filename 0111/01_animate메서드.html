@@ -89,28 +89,6 @@
     .bAr05{
       background: rgb(0, 184, 83);
     }
-    /* 스티븐잡스 */
-    .jobs_line{
-      width: 500px;
-      height: 270px;
-      border: 2px solid #000;
-      overflow: hidden;
-    }
-    .jobs_line>img{
-      position: relative;
-    }
-    #text{
-      top: -150px;
-      left: -180px;
-    }
-    #jobs{
-      top: 400px;
-    }
-    #btn08{
-      position: absolute;
-      left: 30px;
-      margin-top: 20px;
-    }
   </style>
   <!-- 제이쿼리 라이브러리 -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -172,11 +150,6 @@
         $('.bAr03').animate({'width':'250px'},500, 'easeOutElastic');
         $('.bAr04').animate({'width':'350px'},500, 'easeOutElastic');
         $('.bAr05').animate({'width':'600px'},500, 'easeOutElastic');
-      });
-
-      $('#btn08').click(function(){
-        $('#text').animate({'left':'0px'},500);
-        $('#jobs').animate({'top':'0px'},500);
       });
     });
   </script>
@@ -268,12 +241,6 @@
         </div>
       </li>
     </ul>
-  </div>
-  <h3>7. 실습 - 스티븐잡스 나오게 하기</h3>
-  <input type="button"  value="잡스보기" id="btn08">
-  <div class="jobs_line">
-    <img src="./images/jobs_text.gif" alt="텍스트" id="text">
-    <img src="./images/jobs.png" alt="스티븐잡스" id="jobs">
   </div>
 </body>
 </html>

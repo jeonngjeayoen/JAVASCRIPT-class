@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .jobs_line{
+      width: 500px;
+      height: 270px;
+      border: 2px solid #000;
+      overflow: hidden;
+    }
+    .jobs_line>img{
+      position: relative;
+    }
+    #text{
+      top: -150px;
+      left: -180px;
+    }
+    #jobs{
+      top: 400px;
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script>
+    $(function(){
+        $('#text').animate({'left':'0px'},500);
+        $('#jobs').animate({'top':'0px'},500);
+    });
+  </script>
+</head>
+<body>
+  <h3>7. 실습 - 스티븐잡스 나오게 하기</h3>
+  <div class="jobs_line">
+    <img src="./images/jobs_text.gif" alt="텍스트" id="text">
+    <img src="./images/jobs.png" alt="스티븐잡스" id="jobs">
+  </div>
+</body>
+</html>
