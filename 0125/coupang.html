@@ -9,31 +9,30 @@
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script>
-  $(function(){
-    let num = 1;
+$(function(){
 
-    //텍스트에 마우스오버시 href속성안에 값을 가져와서 변수에 담는다.
-    $('.banner nav li a').mouseover(function(){
+let n=1;
+
+$('.banner nav li a').mouseover(function(){
       let url = $(this).attr('href');//href속성값을 변수에 담는다
       console.log(url);//테스트한다
 
       $('.banner div img').attr('src',url);//이미지 src속에 대입한다
     });
-    function move(){
-      if(n==6){
-      n=1;
-      $('.big').attr('src','./img/banner0'+n+'.jpg');
-      }else{
-      $('.big').attr('src','./img/banner0'+n+'.jpg');
-      n++;
-      };
-    };
+
+function move(){
+  if(n==7){
+  n=1;
+  $('.big').attr('src','./img/banner0'+n+'.jpg');
+}else{
+  $('.big').attr('src','./img/banner0'+n+'.jpg');
+  n++;
+};
+};
 
 let Timer = setInterval(move, 1500);
 
-
-
-  });
+});
 </script>
 <body>
   <h2>쿠팡 배너 실습예제</h2>
@@ -43,7 +42,7 @@ let Timer = setInterval(move, 1500);
   </header>
   <article class="banner">
     <div>
-      <img src="./img/banner01.jpg" alt="메인배너">
+      <img src="./img/banner01.jpg" alt="메인배너" class="big">
     </div>
     <nav>
       <ul>
