@@ -22,6 +22,7 @@ $('.banner nav li a').mouseover(function(){
       clearInterval(Timer);
     });
 $('.banner nav ul > li > a').mouseleave(function(){
+      $('.banner nav li:nth-child('+n+')').addClass('on');
       clearInterval(Timer);
       Timer = setInterval(move, 1500);
     });
