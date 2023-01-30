@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>실습과제</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <script src="./script/sub.js" defer></script>
+  <style>
+    #img_box *{margin:0px;padding:0px;}
+    #img_box{
+      width: 1200px;
+      margin:0px auto;
+      text-align: center;
+      position: relative;
+    }
+    h2{
+      text-align: left;
+    }
+    h2:after{
+      content: "";
+      border-bottom: 1px solid #090909;
+      width: 1200px;
+      display: block;
+      margin:0px auto;
+      margin-top: 10px;
+    }
+    #img_box .lnb{display:flex;}
+    #img_box .lnb{
+      padding-left: 40px;
+      padding-top: 50px;
+    }
+    #img_box .lnb li{
+      list-style:none;
+      width: 70px;
+      height: 70px;
+      overflow: hidden;
+      box-sizing: border-box;
+    }
+    #big_img{
+      padding-top: 50px;
+    }
+    #img_box .lnb li img{
+      height: 100%;
+    }
+    #img_box .lnb li:first-child{
+      border: 2px solid #f00;
+    }
+    span{
+      width: 400px;
+      cursor: pointer;
+    }
+    .fa-arrow-left{
+      position: absolute;
+      top: 93px;
+      left: -10px;
+      background: #ccc;
+      width: 50px;
+      height: 70px;
+      line-height: 70px;
+    }
+    .fa-arrow-right{
+      position: absolute;
+      top: 93px;
+      right: -10px;
+      background: #ccc;
+      width: 50px;
+      height: 70px;
+      line-height: 70px;
+    }
+    #img_box .lnb img:hover{opacity:0.8;}
+    #page{
+      position: absolute;
+      top: 10px;
+      left: -100px;
+      font-weight: bold;
+      color: #f00;
+    }
+    i.fas{
+    width: 80px;
+    height: 90px;
+    line-height: 90px;
+    position:absolute;
+    top:58%;
+    color:#fff;
+    background:rgba(0,0,0,.7);
+    font-size:40px;
+    cursor:pointer;
+    }
+    i.fa-angle-left{left:0px;}
+    i.fa-angle-right{right:0px;}
+  </style>
+</head>
+<body>
+  <article id="img_box">
+    <h2>포토</h2>
+    <div class="swiper-container">
+		<ul class="lnb swiper-wrapper">
+			<li class="swiper-slide"><img src="./img01/movie_image1.jpg" alt=""  class="s_img"></li>
+			<li class="swiper-slide"><img src="./img01/movie_image2.jpg" alt=""  class="s_img"></li>
+			<li class="swiper-slide"><img src="./img01/movie_image3.jpg" alt=""  class="s_img"></li>
+			<li class="swiper-slide"><img src="./img01/movie_image4.jpg" alt=""  class="s_img"></li>
+			<li class="swiper-slide"><img src="./img01/movie_image5.jpg" alt=""  class="s_img"></li>
+			<li class="swiper-slide"><img src="./img01/movie_image6.jpg" alt=""  class="s_img"></li>
+			<li class="swiper-slide"><img src="./img01/movie_image7.jpg" alt=""  class="s_img"></li>
+			<li class="swiper-slide"><img src="./img01/movie_image8.jpg" alt=""  class="s_img"></li>
+			<li class="swiper-slide"><img src="./img01/movie_image9.jpg" alt=""  class="s_img"></li>
+			<li class="swiper-slide"><img src="./img01/movie_image10.jpg" alt=""  class="s_img"></li>
+			<li class="swiper-slide"><img src="./img01/movie_image11.jpg" alt=""  class="s_img"></li>
+			<li class="swiper-slide"><img src="./img01/movie_image12.jpg" alt=""  class="s_img"></li>
+			<li class="swiper-slide"><img src="./img01/movie_image13.jpg" alt=""  class="s_img"></li>
+			<li class="swiper-slide"><img src="./img01/movie_image14.jpg" alt=""  class="s_img"></li>
+			<li class="swiper-slide"><img src="./img01/movie_image15.jpg" alt=""  class="s_img"></li>
+			<li class="swiper-slide"><img src="./img01/movie_image16.jpg" alt=""  class="s_img"></li>
+		</ul>
+    </div>
+    <span id="page">&nbsp;</span>
+		<div id="big_img">
+			<img src="./img01/movie_image1.jpg" alt="" id="photo">
+		</div>
+    <i class="fa-solid fa-arrow-left"></i>
+    <i class="fa-solid fa-arrow-right"></i>
+    <i class="fas fa-angle-left"></i>
+    <i class="fas fa-angle-right"></i>
+  </article>
+</body>
+</html>

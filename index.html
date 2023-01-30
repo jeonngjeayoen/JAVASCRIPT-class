@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>웹 프로그래밍의 꽃! 자바스크립트_제이쿼리를 활용한 다양한 효과적용</title>
+      <style>
+        *{margin:0px;padding:0px;}
+        body{
+          font-family: "맑은 고딕",arial,sans-serif;
+          font-size:12px;
+          color:#333333;
+          background:rgb(246, 246, 246);
+        }
+        h1, h2{ text-align:center;}
+        h1 img{width:160px;}
+        h2{line-height:40px;}
+        h2 img{width:190px;}
+
+        /* 테두리 선 */
+        .border01{
+          border-top:3px solid #0c58a0;
+          border-bottom:3px solid #0c58a0;
+        }
+        /* 제목 배경 */
+        .bgcolor01{background:#1c83e4;}
+        dl{
+          text-indent:10px;
+          background:rgb(246, 246, 246);
+        }
+        dt{
+          font-size:14px;
+          color:#fff;
+          padding:12px 0px;
+          font-weight: bold;
+          border-bottom:1px solid #ffffff;
+        }
+        dd{ 
+          border-bottom:1px solid #cccccc;
+          text-indent:16px;
+        }
+        dd > a{
+          display:block;
+          font-size:13px;
+          line-height:40px;
+          color:#333333;
+          text-decoration:none;
+        }
+        dd > a:hover{
+          background-color:beige;
+        }
+        footer{
+          background-color:#5f5e5e;
+          color:#ffffff;
+          text-align:center;
+          line-height:50px;
+        }
+        footer > address{font-style:normal;}
+      </style>
+    </head>
+    <body>
+      <header>
+      <h1>웹 프로그래밍의 꽃! 자바스크립트_제이쿼리를 활용한 다양한 효과적용</h1>
+      </header>
+
+      <main>
+        <h2><img src="./images/js_logo.png" alt="스크립트 로고"></h2>
+        <section class="border01">
+          <dl>
+            <dt class="bgcolor01">1일차 - 자바스크립트 시작</dt>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/1219/01javascript_start.html" title="01_자바스크립트 시작">01_자바스크립트 시작</a></dd>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/1219/02javascript_exec.html" title="02_자바스크립트로 만들 수 있는 콘텐츠 찾아보기/만들기">02_자바스크립트로 만들 수 있는 콘텐츠 찾아보기/만들기</a></dd>
+          </dl>
+          <dl>
+            <dt class="bgcolor01">2일차 - 자바스크립트 문서 출력 방법</dt>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/1221/01자바스크립트 문서출력방법.html" title="01자바스크립트 문서출력방법">01_자바스크립트 문서출력방법</a></dd>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/1221/02자바스크립트 변수선언과 작성법.html" title="02자바스크립트 변수선언과 작성법">02_자바스크립트 변수선언과 작성법</a></dd>
+          </dl>
+          <dl>
+            <dt class="bgcolor01">3일차 - 자바스크립트 변수</dt>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/1222/01변수복습.html" title="01_변수복습">01_변수복습</a></dd>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/1222/02데이터 타입.html" title="02데이터 타입">02_데이터 타입</a></dd>
+          </dl>
+          <dl>
+            <dt class="bgcolor01">4일차 - 자바스크립트 연산자</dt>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/1223/01_operate.html" title="01_operate">01_operate</a></dd>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/1223/실습예제_연산자를 활용한 사칙연산 모바일 계산기.html" title="실습예제_연산자를 활용한 사칙연산 모바일 계산기">실습예제_연산자를 활용한 사칙연산 모바일 계산기</a></dd>
+          </dl>
+          <dl>
+            <dt class="bgcolor01">5일차 - 자바스크립트 제어문</dt>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/1226/01제어문(1_조건문).html" title="01제어문(1_조건문)">01제어문(1_조건문)</a></dd>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/1226/01제어문(2_선택문).html" title="01제어문(2_선택문)">01제어문(2_선택문)</a></dd>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/1226/01제어문(3_반복문).html" title="01제어문(3_반복문)">01제어문(3_반복문)</a></dd>
+          </dl>
+          <dl>
+            <dt class="bgcolor01">6일차 - 자바스크립트 함수</dt>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/1227/01javascript_함수(function).html" title="01제어문(1_조건문)">01javascript_함수(function)</a></dd>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/1227/exec01.html" title="자리배치도_실습예제">자리배치도_실습예제</a></dd>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/1227/exec01.html" title="배너구현하기_실습예제">배너구현하기_실습예제</a></dd>
+          </dl>
+          <dl>
+            <dt class="bgcolor01">7일차 - 자바스크립트 함수의 실행과 선언</dt>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/1229/01함수선언과 실행.html" title="01함수선언과 실행">01함수선언과 실행</a></dd>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/1229/02_함수를 활용하여 적정체중_비만도지수구하기.html" title="02_함수를 활용하여 적정체중_비만도지수구하기">02_함수를 활용하여 적정체중_비만도지수구하기</a></dd>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/1229/03_함수 표현식.html" title="배너구현하기_실습예제">03_함수 표현식</a></dd>
+          </dl>
+          <dl>
+            <dt class="bgcolor01">8일차 - 자바스크립트 이벤트</dt>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/1230/01variable(변수)복습과 유의사항.html" title="01variable(변수)복습과 유의사항">01variable(변수)복습과 유의사항</a></dd>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/1230/02event(이벤트).html" title="02event(이벤트)">02event(이벤트)</a></dd>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/1230/03_내장객체(object)_Date.html" title="03_내장객체(object)_Date">03_내장객체(object)_Date</a></dd>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/1230/exec01_tab.html" title="클릭이벤트_실습예제">클릭이벤트_실습예제</a></dd>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/1230/exec02_tab_news_list.html" title="뉴스리스트_실습예제">뉴스리스트_실습예제</a></dd>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/1230/exec03_css news_list.html" title="탭매뉴_뉴스리스트">탭매뉴_뉴스리스트</a></dd>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/1230/index.html" title="뉴스리스트_실습과제">뉴스리스트_실습과제</a></dd>
+          </dl>
+          <dl>
+            <dt class="bgcolor01">9일차 - 자바스크립트 객체</dt>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/0102/01_객체(object).html" title="01_객체(object)">01_객체(object)</a></dd>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/0102/02_내장객체(object)_배열(array)" title="02_내장객체(object)_배열(array)">02_내장객체(object)_배열(array)</a></dd>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/0102/03_내장객체(object)_Date" title="03_내장객체(object)_Date">03_내장객체(object)_Date</a></dd>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/0102/04_내장객체(object)_Math.html" title="04_내장객체(object)_Math">04_내장객체(object)_Math</a></dd>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/0102/exec_랜덤이미지.html" title="naver_랜덤이미지">naver_랜덤이미지</a></dd>
+          </dl>
+          <dl>
+            <dt class="bgcolor01">10일차 - 자바스크립트 객체(window,document)</dt>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/0103/01_window_object" title="01_window_object">01_브라우저 객체</a></dd>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/0103/02_document_object" title="02_document_object">02_문서 객체</a></dd>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/0103/index" title="적응형 웹">적응형 웹</a></dd>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/0103/mindex" title="적응형 웹_모바일">적응형 웹_모바일</a></dd>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/0103/popup.html" title="팝업창">팝업창</a></dd>
+          </dl>
+          <dl>
+            <dt class="bgcolor01">11일차 - 자바스크립트 문자열</dt>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/0104/01_document.html" title="01_문서객체모델_내용수정_삽입하기">01_문서객체모델_내용수정_삽입하기
+            </a></dd>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/0104/02_document02.html" title="02_문서객체모델_속성(attribute)변경">02_문서객체모델_속성(attribute)변경
+            </a></dd>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/0104/03_string.html" title="03문자열(string) 객체">03문자열(string) 객체
+            </a></dd>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/0104/index.html" title="자바스크립트 문서객체모델_속성값을 활용한 상품 미리보기 콘텐츠">실습예제_속성값을 활용한 상품 미리보기 콘텐츠
+            </a></dd>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/0104/index01.html" title="실습과제_이미지 영화 갤러리">실습과제_이미지 영화 갤러리
+            </a></dd>
+          </dl>
+          <dl>
+            <dt class="bgcolor01">12일차 - 자바스크립트 배열</dt>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/0105/carousel_slide" title="캐러셀(carousel) 슬라이드_실습과제">캐러셀(carousel) 슬라이드 쿠팡_실습과제
+            </a></dd>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/0105/naver_gallery.html" title="네이버 영화 갤러리(아바타2)">네이버 영화 갤러리(아바타2)</a></dd>
+            </a></dd>
+          </dl>
+        </section>
+        
+        <h2><img src="./images/jq_logo.png" alt="스크립트 로고"></h2>
+        <section class="border01">
+          <dl>
+            <dt class="bgcolor01">1일차 - 제이쿼리 소개와 문법</dt>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/0106/01_제이쿼리소개와 문법.html" title="01_제이쿼리소개와 문법">01_제이쿼리소개와 문법</a></dd>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/0106/02_제이쿼리 선택자와 css메소드 활용하기.html" title="02_제이쿼리 선택자와 css메소드 활용하기">02_제이쿼리 선택자와 css메소드 활용하기</a></dd>
+            <dd><a href="https://jeonngjeayoen.github.io/JAVASCRIPT-class/0106/과제_제이쿼리 선택자 학습하기/과제물_제이쿼리 선택자 학습하기(기본선택자, 탐색, 속성).html" title="실습과제_제이쿼리 선택자 학습하기(기본선택자, 탐색, 속성).html">실습과제_제이쿼리 선택자 학습하기(기본선택자, 탐색, 속성)</a></dd>
+          </dl>
+          <dl>
+            <dt class="bgcolor01">2일차-제이쿼리 이벤트와 효과</dt>
+            <dd><a href="./0109/01jquery_event.html" title="이벤트">01_제이쿼리 이벤트</a></dd>
+            <dd><a href="./0109/02jquery_effect.html" title="효과">02_제이쿼리 효과</a></dd>
+            <dd><a href="./0109/coupang.html" title="실습예제">03_실습예제(쿠팡)</a></dd>
+          </dl>
+          <dl>
+            <dt class="bgcolor01">3일차-효과메서드를 활용한 슬라이드</dt>
+            <dd><a href="./0110/exec01/fadeIn_Out_slide.html" title="01_효과메서드를 활용한 슬라이드">01_효과메서드를 활용한 슬라이드</a></dd>
+            <dd><a href="./0110/exec02/index.html" title="실습예제_스타벅스">실습예제_스타벅스</a></dd>
+          </dl>
+          <dl>
+            <dt class="bgcolor01">4일차-제이쿼리 애니메이트 메서드</dt>
+            <dd><a href="./0111/01_animate메서드.html" title="01_효과메서드를 활용한 슬라이드">01_제이쿼리 애니메이트 메서드</a></dd>
+            <dd><a href="./0111/02_스티븐잡스.html" title="실습예제_스타벅스">02_실습예제 스티븐잡스</a></dd>
+          </dl>
+          <dl>
+            <dt class="bgcolor01">5일차-제이쿼리 애니메이트 메서드 응용</dt>
+            <dd><a href="./0112/01_exec01_quick_menu.html" title="01_제이쿼리-애니메이트 실습예제01-쇼핑몰 ASIDE메뉴">01_제이쿼리-애니메이트 실습예제01-쇼핑몰 ASIDE메뉴</a></dd>
+            <dd><a href="./0112/index.html" title="02_제이쿼리-베스킨라빈스">02_제이쿼리-베스킨라빈스</a></dd>
+          </dl>
+          <dl>
+            <dt class="bgcolor01">6일차-제이쿼리 애니메이트 메서드 응용</dt>
+            <dd><a href="./0113/exec01/index_반응형.html" title="02_제이쿼리-베스킨라빈스_반응형">02_제이쿼리-베스킨라빈스_반응형</a></dd>
+            <dd><a href="./0113/exec02/control_slide01.html" title="02_콘트롤 버튼이 있는 슬라이드 구현">02_콘트롤 버튼이 있는 슬라이드 구현</a></dd>
+            <dd><a href="./0113/exec02/control_slide01.html" title="03_콘트롤 버튼이 있는 슬라이드 구현(auto기능추가)">03_콘트롤 버튼이 있는 슬라이드 구현(auto기능추가)</a></dd>
+            <dd><a href="./0113/exec02/index.html" title="실습예제-슬라이드 구현하기">실습예제-슬라이드 구현하기</a></dd>
+          </dl>
+          <dl>
+            <dt class="bgcolor01">8일차-스크롤 위치값</dt>
+            <dd><a href="./0117_프로젝트평가/자바스크립트 스크롤 위치값으로 콘텐츠 나오게.html" title="자바스크립트 스크롤 위치값으로 콘텐츠 나오게">자바스크립트 스크롤 위치값으로 콘텐츠 나오게</a></dd>
+          </dl>
+          <dl>
+            <dt class="bgcolor01">9일차-favicon</dt>
+            <dd><a href="./0118_favicon/index.html" title="웹문서에 파비콘 삽입하기">웹문서에 파비콘 삽입하기</a></dd>
+          </dl>
+          <dl>
+            <dt class="bgcolor01">10일차-검색엔진 최적화</dt>
+            <dd><a href="./0119_seo/검색엔진최적화(SEO).html" title="검색엔진최적화(SEO)">검색엔진최적화(SEO)</a></dd>
+          </dl>
+          <dl>
+            <dt class="bgcolor01">11일차-프로젝트 시드물</dt>
+            <dd><a href="./0120_프로젝트_발표/반응형 프로젝트 시드물/index.html" title="프로젝트 시드물">프로젝트 시드물</a></dd>
+          </dl>
+          <dl>
+            <dt class="bgcolor01">12일차-제이쿼리 애니메이트 메서드 응용</dt>
+            <dd><a href="./0125/total_slide.html" title="01_제이쿼리-슬라이드_세로방향">01_제이쿼리-슬라이드_세로방향</a></dd>
+            <dd><a href="./0125/coupang.html" title="02_쿠팡배너_실습예제">02_쿠팡배너_실습예제</a></dd>
+          </dl>
+          <dl>
+            <dt class="bgcolor01">13일차-제이쿼리 문서객체조작</dt>
+            <dd><a href="./0126/jquery_DOM_class.html" title="class">01_제이쿼리 문서객체조작(class)</a></dd>
+            <dd><a href="./0126/jquery_DOM_add_remove.html" title="내용추가, 삭제">02_제이쿼리 문서객체조작(내용추가, 삭제)</a></dd>
+            <dd><a href="./0126/jquery_DOM_modal_window.html" title="슬라이드">03_제이쿼리 모달윈도(쿠키)</a></dd>
+            <dd><a href="./0126/jquery_DOM_modal_window2.html" title="슬라이드">03_제이쿼리 모달윈도2(쿠키)</a></dd>
+            <dd><a href="./0126/jquery_DOM_image_slide.html" title="슬라이드">03_제이쿼리 이미지 가로 슬라이드(협력사 배너)</a></dd>
+          </dl>
+          <dl>
+            <dt class="bgcolor01">14일차-제이쿼리 문서객체조작-제이쿼리 이미지 갤러리</dt>
+              <dd><a href="./0127/gallery.html" title="class">01_제이쿼리 이미지 갤러리(캡션, 정렬, 모달, 제목, 페이지수)</a></dd>
+          </dl>
+        </section>
+      </main>
+
+      <footer>
+        <address>Copyright&copy;2022 HTML5/CSS3 학습페이지 allrights reserved.</address>
+      </footer>
+    </body>
+</html>

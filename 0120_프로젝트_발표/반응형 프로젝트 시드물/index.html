@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="시드물 브랜드페이지">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>피부의 고향 - 시드물</title>
+  <!-- jQuery 삽입 -->
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  <!-- 웹폰트 -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+  <link rel="stylesheet" type="text/css" href="./css/base.css">
+  <!-- 리셋CSS -->
+  <link rel="stylesheet" type="text/css"  href="./css/reset.css">
+  <!-- 메뉴, 푸터 서식 -->
+  <link rel="stylesheet" type="text/css"  href="./css/common.css">
+  <!-- mainpageCSS -->
+  <link rel="stylesheet" type="text/css"  href="./css/main.css">
+  <link rel="stylesheet" type="text/css"  href="./css/swiper.css">
+  <!-- header Jquery -->
+  <script src="./script/header.js" defer></script>
+  <script src="./script/main.js" defer></script>
+  <!-- swiper slide -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <!-- favicon 선언 -->
+  <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="./favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+  <link rel="manifest" href="./favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="./favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+  <!-- modal 영역 시작 -->
+  <div class="modal" id="m_box">
+    <div class="b_modal">
+      <a href="#none" title="정품인증 안내">
+        <img src="./img/Activation.jpg" alt="정품인증배너">
+      </a>
+      <p><input type="button" value="닫기" id="b-modal-close"></p>
+    </div>
+  </div>
+
+  <!-- header 영역 시작 -->
+  <input type="checkbox" id="toggle" name="toggle">
+  <header id="header">
+    <div class="h-top">
+      <h1>
+        <a href="./index.html" title="메인화면으로 돌아가기">
+          <img src="./img/sidmool.svg" alt="시드물">
+        </a>
+      </h1>
+      <ul>
+        <li>
+          <a href="./login/login.html">LOGIN</a>
+        </li>
+        <li>
+          <a href="./join/join.html">JOIN</a>
+        </li>
+        <li>
+          <a href="#none">CS CENTER</a>
+        </li>
+      </ul>
+    </div>
+
+    <label for="toggle" class="total_btn">
+        <span class="h-mnu-btn">
+          <span class="h-btn01">&nbsp;</span>
+          <span class="h-btn02">&nbsp;</span>
+          <span class="h-btn03">&nbsp;</span>
+        </span>
+    </label>
+
+    <div class="h-bottom">
+      <nav>
+        <ul>
+          <li id="top01">
+            <a href="#none">COMPANY
+              <span class="arrow"><img src="./img/btn_down.svg" alt="클릭하면 메뉴가 나옵니다."></span>
+            </a>
+            <ul class="lnb" id="menu01">
+              <li><a href="#none">기업소개</a></li>
+              <li><a href="#none">연혁/비전</a></li>
+              <li><a href="#none">CEO인사말</a></li>
+            </ul>
+          </li>
+          <li id="top02">
+            <a href="./story/story.html">STORY
+              <span class="arrow"><img src="./img/btn_down.svg" alt="클릭하면 메뉴가 나옵니다."></span>
+            </a>
+            <ul class="lnb" id="menu02">
+              <li><a href="#none">브랜드이야기</a></li>
+              <li><a href="#none">윤리경영</a></li>
+              <li><a href="#none">동물복지</a></li>
+            </ul>
+          </li>
+          <li id="top03">
+            <a href="./product/product.html">PRODUCT
+              <span class="arrow"><img src="./img/btn_down.svg" alt="클릭하면 메뉴가 나옵니다."></span>
+            </a>
+            <ul class="lnb" id="menu03">
+              <li><a href="#none">닥터트럽</a></li>
+              <li><a href="#none">뷰리즈</a></li>
+              <li><a href="#none">아크바이</a></li>
+              <li><a href="#none">사카로</a></li>
+            </ul>
+          </li>
+          <li id="top04">
+            <a href="#none">NEWS
+              <span class="arrow"><img src="./img/btn_down.svg" alt="클릭하면 메뉴가 나옵니다."></span>
+            </a>
+            <ul class="lnb" id="menu04">
+              <li><a href="#none">공지사항</a></li>
+              <li><a href="#none">보도자료</a></li>
+              <li><a href="#none">이벤트</a></li>
+            </ul>
+          </li>
+          <li id="top05">
+            <a href="#none">CONTACT
+              <span class="arrow"><img src="./img/btn_down.svg" alt="클릭하면 메뉴가 나옵니다."></span>
+            </a>
+            <ul class="lnb" id="menu05">
+            <li><a href="#none">찾아오시는길</a></li>
+            <li><a href="#none">문의하기</a></li>
+          </ul>
+        </li>
+        <img src="./img/mainslide1-1.jpg" alt="사이드 이미지" class="h-bottom-mnu-img">
+        </ul>
+      </nav>
+    </div>
+    <div class="h-bottom-wrap">&nbsp;</div>
+  </header>
+
+  <!-- main 영역 시작 -->
+  
+  <!-- 배너 슬라이드 -->
+  <section id="slide">
+    <h2>배너</h2>
+    <div class="swiper m-banner-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide slide01">
+          <div class="item-wrap">
+            <p>피부의 포근한 고향</p>
+            <p>시드물 <span>Sidmool</span></p>
+            <p>자연주의 화장품 시드물<br>
+              제주 녹차의 싱그러움을 담다.</p>
+          </div>
+          <img src="./img/mainslide1.jpg" alt="slide1" class="m-slide-bg">
+        </div>
+        <div class="swiper-slide slide02">
+          <div class="item-wrap">
+            <p>피부의 포근한 고향</p>
+            <p>시드물 <span>Sidmool</span></p>
+            <p>자연주의 화장품 시드물<br>
+              제주 녹차의 싱그러움을 담다.</p>
+          </div>
+          <img src="./img/mainslide2.jpg" alt="slide2" class="m-slide-bg">
+        </div>
+        <div class="swiper-slide slide03">
+          <div class="item-wrap">
+            <p>피부의 포근한 고향</p>
+            <p>시드물 <span>Sidmool</span></p>
+            <p>자연주의 화장품 시드물<br>
+              제주 녹차의 싱그러움을 담다.</p>
+          </div>
+          <img src="./img/mainslide3.jpg" alt="slide3" class="m-slide-bg">
+        </div>
+        <div class="swiper-slide slide04" >
+          <div class="item-wrap">
+            <p>피부의 포근한 고향</p>
+            <p>시드물 <span>Sidmool</span></p>
+            <p>자연주의 화장품 시드물<br>
+              제주 녹차의 싱그러움을 담다.</p>
+          </div>
+          <img src="./img/mainslide4.jpg" alt="slide4" class="m-slide-bg">
+        </div>
+        <div class="swiper-slide slide05">
+          <div class="item-wrap">
+            <p>피부의 포근한 고향</p>
+            <p>시드물 <span>Sidmool</span></p>
+            <p>자연주의 화장품 시드물<br>
+              제주 녹차의 싱그러움을 담다.</p>
+          </div>
+          <img src="./img/mainslide5.jpg" alt="slide5" class="m-slide-bg">
+        </div>
+      </div>
+      <div class="c-wrap">
+        <div class="swiper-pagination"></div>
+        <div class="swiper-btn">
+          <img src="./img/pause_btn.svg" alt="재생/멈춤 버튼" id="c-btn">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 시드물 스토리 -->
+  <article id="story" class="scroll">
+  <h2>시드물 스토리</h2>
+    <div id="story01">
+      <a href="./story/story.html" title="브랜드 스토리 바로가기">
+        <figure>
+          <img src="./img/gallary_hover.svg" alt="자세히보기" class="m-fig-hover">
+          <img src="./img/story01.jpg" alt="녹차">
+          <figcaption>
+            <p>녹차를 담아내는 것</p>
+            <p>시드물의 초심은 녹차를 담아내는 것에서 시작했습니다. 저희 제품은 절대로 인공적인 성분인 에탄올과 미네랄 오일을 넣지 않고 녹차와 자연 그대로를 담아낸 착한 화장품을 2007년에 만들게 되었고 녹차에 담긴 적당한 유분과 영양으로 예민한 피부의 고객님들에게 호평을 받은 이유로 시드물이 여기까지 오게 되었습니다.</p>
+          </figcaption>
+        </figure>
+      </a>
+      <a href="./story/story.html" title="브랜드 스토리 바로가기">
+        <figure>
+          <img src="./img/gallary_hover.svg" alt="자세히보기" class="m-fig-hover">
+          <img src="./img/story02.jpg" alt="효심">
+          <figcaption>
+            <p>효심의 저자극</p>
+            <p>시드물의 시작은 창립자의 예민한 피부를 가진 창립자의 어머니가 어느 화장품을 발라도 거부반응이 오자, 연구를 시작하여 인공적인 재료를 전부 배제한 천연재료 그대로를 담아낸 이후로 전국의 예민피부를 가진 사람들을 위한 브랜드를 만들자고 결정 2006년에 시드물이 창립되었습니다.</p>
+          </figcaption>
+        </figure>
+      </a>
+    </div>
+  </article>
+
+  <!-- 시드물 뉴스룸 -->
+  <article id="newsroom">
+    <h2>시드물 뉴스룸</h2>
+      <div id="newsroom01">
+        <a href="#none" title="시드물 연구소 개업">
+          <figure>
+            <img src="./img/news1.jpg" alt="뉴스 1번">
+            <figcaption>
+              <p>
+                <span>시드물 소식</span>
+                시드물 연구소 개업
+              </p>
+              <p>시드물의 초심은 녹차를 담아내는 것에서 시작했습니다. 저희 제품은 절대로 인공적인 성분인 에탄올과 미네랄 오일을 넣지 않고 녹차와 자연 그대로를 담아낸 착한 화장품을 2007년에 만들게 되었고 녹차에 담긴 적당한 유분과 영양으로 예민한 피부의 고객님들에게 호평을 받은 이유로 시드물이 여기까지 오게 되었습니다.</p>
+              <img src="./img/gallary_hover.svg" alt="자세히보기" class="m-fig-hover">
+            </figcaption>
+        </figure>
+      </a>
+      <a href="#none" title="아름다운 가게 입점">
+        <figure>
+          <img src="./img/news2.jpg" alt="뉴스 2번">
+          <figcaption>
+            <p>
+              <span>시드물 소식</span>아름다운 가게 입점
+            </p>
+            <p>시드물의 시작은 창립자의 예민한 피부를 가진 창립자의 어머니가 어느 화장품을 발라도 거부반응이 오자, 연구를 시작하여 인공적인 재료를 전부 배제한 천연재료 그대로를 담아낸 이후로 전국의 예민피부를 가진 사람들을 위한 브랜드를 만들자고 결정 2006년에 시드물이 창립되었습니다.</p>
+            <img src="./img/gallary_hover.svg" alt="자세히보기" class="m-fig-hover">
+          </figcaption>
+        </figure>
+      </a>
+      <a href="#none" title="동네꾸미기 봉사활동">
+        <figure>
+          <img src="./img/news3.jpg" alt="뉴스 3번">
+          <figcaption>
+            <p>
+              <span>시드물 나눔이야기</span>
+              동네꾸미기 봉사활동
+            </p>
+            <p>시드물의 시작은 창립자의 예민한 피부를 가진 창립자의 어머니가 어느 화장품을 발라도 거부반응이 오자, 연구를 시작하여 인공적인 재료를 전부 배제한 천연재료 그대로를 담아낸 이후로 전국의 예민피부를 가진 사람들을 위한 브랜드를 만들자고 결정 2006년에 시드물이 창립되었습니다.</p>
+            <img src="./img/gallary_hover.svg" alt="자세히보기" class="m-fig-hover">
+          </figcaption>
+        </figure>
+        </a>
+        <a href="#none" title="시드물 사이트 리뉴얼">
+        <figure>
+          <img src="./img/news4.jpg" alt="뉴스 4번">
+          <figcaption>
+            <p>
+              <span>시드물 소식</span>
+              시드물 사이트 리뉴얼
+            </p>
+            <p>시드물의 시작은 창립자의 예민한 피부를 가진 창립자의 어머니가 어느 화장품을 발라도 거부반응이 오자, 연구를 시작하여 인공적인 재료를 전부 배제한 천연재료 그대로를 담아낸 이후로 전국의 예민피부를 가진 사람들을 위한 브랜드를 만들자고 결정 2006년에 시드물이 창립되었습니다.</p>
+            <img src="./img/gallary_hover.svg" alt="자세히보기" class="m-fig-hover">
+          </figcaption>
+        </figure>
+      </a>
+      <a href="#none" title="시드물 사무실 이전">
+        <figure>
+          <img src="./img/news5.jpg" alt="뉴스 5번">
+          <figcaption>
+            <p>
+              <span>시드물 공지사항</span>시드물 사무실 이전
+            </p>
+            <p>시드물의 시작은 창립자의 예민한 피부를 가진 창립자의 어머니가 어느 화장품을 발라도 거부반응이 오자, 연구를 시작하여 인공적인 재료를 전부 배제한 천연재료 그대로를 담아낸 이후로 전국의 예민피부를 가진 사람들을 위한 브랜드를 만들자고 결정 2006년에 시드물이 창립되었습니다.</p>
+            <img src="./img/gallary_hover.svg" alt="자세히보기" class="m-fig-hover">
+          </figcaption>
+        </figure>
+      </a>
+      <a href="#none" title="시드물 오가닉 라인">
+        <figure>
+          <img src="./img/news6.jpg" alt="뉴스 6번">
+          <figcaption>
+            <p>
+              <span>시드물 신제품</span>
+              시드물 오가닉 라인 출시
+            </p>
+            <p>시드물의 시작은 창립자의 예민한 피부를 가진 창립자의 어머니가 어느 화장품을 발라도 거부반응이 오자, 연구를 시작하여 인공적인 재료를 전부 배제한 천연재료 그대로를 담아낸 이후로 전국의 예민피부를 가진 사람들을 위한 브랜드를 만들자고 결정 2006년에 시드물이 창립되었습니다.</p>
+            <img src="./img/gallary_hover.svg" alt="자세히보기" class="m-fig-hover">
+          </figcaption>
+        </figure>
+      </a>
+      </div>
+  </article>
+
+  <!-- 고객의 소리 -->
+  <article id="call">
+    <h2>고객의 소리</h2>
+    <div class="m-call">
+      <div>
+        <img src="./img/call.jpg" alt="고객센터">
+      </div>
+      <div>
+        <div class="m-call-info">
+          <p><span>어머니에게<br>드린다는 마음</span>으로, <br> 허투루 만들지 않겠습니다.</p>
+          <p>어머니에게 드린다는 마음으로<br>
+            시드물은 화장품의 품질을 위해 노력하고 있으며,<br>
+            고객님의 소리에 항상 귀를 기울이겠습니다.</p>
+          <a href="#none" title="문의 게시판 바로가기">게시판 바로가기</a>
+        </div>
+      </div>
+    </div>
+
+  </article>
+
+  <!-- footer 영역 시작 -->
+  <footer>
+    <div class="f-top">
+      <ul class="f-info">
+        <li><a href="#none">공지사항</a></li>
+        <li><a href="#none">이용약관</a></li>
+        <li><a href="#none">이용안내</a></li>
+        <li><a href="#none">고객센터</a></li>
+        <li><a href="#none">사업자정보확인</a></li>
+      </ul>
+    </div>
+    <div class="f-bottom">
+      <p>
+        <span class="f-txt-info">대표</span>민병권
+      </p>
+      <p>
+        <span class="f-txt-info">상호</span>주식회사 시드물
+      </p>
+      <p>
+        <span class="f-txt-info">사업자등록번호</span>000-0-0-0000
+      </p>
+      <p>
+        <span class="f-txt-info">주소</span>000000 대전광역시 중구 000(000)
+      </p>
+      <p>
+        <span class="f-txt-info">통신판매업신고번호</span>제2008-대전중구•0000호 
+      </p>
+      <p>
+        <span class="f-txt-info">건강기능식품판매업</span>대전중구-제000
+      </p>
+      <p>
+        <span class="f-txt-info">화장품제조판매업등로길증</span>제0000호
+      </p>
+      <p class="f-tel-num">
+        고객센터 080-000-0000
+      </p>
+      <address class="adress">
+        COPYRIGHT &copy; 2023 <span class="f-company">SIDMOOL</span> ALL RIGHT RESERVED.
+      </address>
+      <div class="f-top-btn">
+        <div class="f-qr-btn">
+          <a href="#none"><img src="./img/QRcode2.jpg" alt="정품인증">
+          정품인증
+          </a>
+        </div>
+        <div class="f-btn">
+          <a href="#" title="최상단으로 돌아가기">TOP</a>
+        </div>
+      </div>
+    </div>
+    
+
+  </footer>
+</body>
+</html>

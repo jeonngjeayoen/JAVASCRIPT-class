@@ -1,0 +1,1008 @@
+@charset "UTF-8";
+
+/* header 공통 서식 */
+#toggle {
+    display: none;
+}
+header {
+    width: 100%;
+    background: #FFF;
+    z-index: 9980;
+    transition: 0.4s;
+    position: relative;
+}
+.h-bottom,
+.h-top {
+    position: relative;
+    margin: 0 auto;
+}
+.h-top a {
+    color: #AAA;
+}
+.h-top ul {
+    display: flex;
+}
+.h-bottom {
+    font-size: 18px;
+}
+
+/* 헤더서식 */
+@media (min-width: 1025px) {
+
+    /* 1200px 미만시 실행 */
+    @media screen and (min-width:1025px) and (max-width:1215px) {
+        .h-top {
+            width: 100% !important;
+            margin: 0 auto !important;
+        }
+        .h-top h1 {
+            left: 40px !important;
+        }
+        .h-top ul {
+            top: 10px !important;
+            right: 40px !important;
+        }
+        .h-bottom > nav {
+            position: relative !important;
+            right: 40px !important;
+            width: 100% !important;
+        }
+    }
+    header {
+        height: 120px;
+    }
+    .total_btn {
+        display: none;
+    }
+    .h-b-btn {
+        display: none;
+    }
+    .h-bottom,
+    .h-top {
+        height: 60px;
+        background: #fff;
+    }
+    .h-bottom,
+    .h-bottom-wrap,
+    .h-top {
+        transition: 0.4s;
+    }
+    .h-bottom nav,
+    .h-top {
+        width: 1200px;
+        margin: 0 auto;
+    }
+    .h-top > h1 {
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 0;
+        width: 210px;
+        height: 110px;
+        z-index: 100;
+        transition: 0.4s;
+    }
+    .h-top h1 > a > img {
+        display: block;
+        width: 100%;
+        height: 110px;
+        transition: 0.4s;
+    }
+    .h-top ul {
+        position: absolute;
+        top: 10px;
+        right: 0;
+        width: 300px;
+        line-height: 60px;
+        justify-content: flex-end;
+    }
+    .h-top li {
+        display: block;
+        padding-left: 30px;
+    }
+    .h-bottom {
+        overflow-y: hidden;
+        border-bottom: 1px solid #e9e9e9;
+    }
+    .h-bottom:hover {
+        height: 250px;
+    }
+    .h-bottom nav > ul {
+        display: flex;
+        text-align: left;
+        justify-content: flex-end;
+    }
+    .h-bottom nav > ul > li:not(:nth-of-type(3)) {
+        display: block;
+        padding-left: 60px;
+    }
+    .h-bottom nav > ul > li:nth-last-of-type(3) {
+        display: block;
+        padding-left: 38px;
+    }
+    .h-bottom nav > ul > li > a {
+        display: inline-block;
+        position: relative;
+        line-height: 60px;
+    }
+
+    /* 서브메뉴 서식 */
+    .lnb {
+        padding-top: 15px;
+    }
+    .lnb > li {
+        width: 100%;
+        text-align: left;
+    }
+    .lnb > li > a {
+        display: inline;
+        position: relative;
+        width: 100%;
+        font-size: 15px;
+        line-height: 35px;
+        padding-top: 20px;
+    }
+
+    /* focus */
+    .focus::before {
+        display: block;
+        position: absolute;
+        top: 56px;
+        right: 0;
+        left: auto;
+        width: 100%;
+        height: 5px;
+        background: #83A666;
+        content: "";
+        transition: width 0.25s ease-out;
+    }
+    .nonactive::before {
+        width: 0;
+    }
+
+    /* 마우스 오버 */
+    .h-bottom > nav ul > li > a::after {
+        display: block;
+        position: absolute;
+        right: 0;
+        left: auto;
+        width: 0;
+        content: "";
+        border-bottom: 5px solid #83A666;
+        transition: width 250ms ease-out;
+    }
+    .h-bottom > nav > ul > li > a::after {
+        top: 56px;
+    }
+    .lnb > li > a::after {
+        top: 39px;
+    }
+    .h-bottom nav ul > li > a:hover:after {
+        right: auto;
+        left: 0;
+        width: 100%;
+    }
+    .h-bottom-wrap {
+        position: absolute;
+        top: 110px;
+        width: 100%;
+        height: 10px;
+        z-index: 1001;
+        border-bottom: 1px solid #dadada;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    /* 스크롤 내려가면 실행 */
+    .active {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 60px;
+    }
+    .active > .h-top {
+        height: 1px;
+    }
+    .active > .h-top > ul {
+        display: none;
+    }
+    .active > .h-top > h1 {
+        top: -30px;
+        width: 150px;
+    }
+    .h-bottom-mnu-img{display: none;}
+    .arrow{display: none;}
+    .active > .h-bottom-wrap {
+        top: 51px;
+    }
+}
+
+/* tablet, mobile 공통서식 */
+@media (min-width:320px) and (max-width:1024px) {
+    header {
+        position: fixed;
+        top: 0;
+        overflow: hidden;
+        border-bottom: 1px solid #dadada;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+    .h-b-btn {
+        display: block;
+        position: absolute;
+        width: auto;
+        z-index: 999;
+    }
+    .h-b-btn img {
+        height: 100%;
+    }
+    .h-top {
+        width: 100%;
+        margin: 0 auto;
+        background: #FFF;
+        border-bottom: 1px solid #DADADA;
+        z-index: 10;
+    }
+    .h-top ul {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+        padding: 0px 1em;
+        background: none;
+        z-index: 9999;
+        text-align: left;
+    }
+    .h-top li {
+        display: none;
+        width: 120px;
+        height: 40px;
+    }
+    .h-top li a {
+        line-height: 40px;
+    }
+    .h-top li a::after {
+        display: inline-block;
+        position: relative;
+        right: -40px;
+        width: 1px;
+        height: 14px;
+        background: #AAA;
+        content: "";
+    }
+    .h-top li:last-of-type a:after {
+        display: none;
+    }
+    .h-bottom {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        transition: 0.3s;
+        background-color: #fff;
+        z-index: 1;
+    }
+    .h-bottom nav > ul {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0px 1em;
+        box-sizing: border-box;
+        font-weight: 600;
+        position: relative;
+        text-align: left;
+    }
+    .lnb > li >a{
+        font-weight: 200;
+    }
+    .arrow{
+        display: inline-block;
+        width: 1rem; height: 1rem;
+        padding-left: 1rem;
+    }
+    header > label {
+        position: absolute;
+        z-index: 9999;
+        overflow: hidden;
+    }
+    .h-mnu-btn {
+        display: block;
+        position: relative;
+        overflow: hidden;
+    }
+    .h-header-on {
+        height: 100vh;
+    }
+    .h-bottom-mnu-img{
+        display: block;
+        position: absolute;
+        top: 30px;
+        right: 1rem;
+        width: 50%;
+        object-fit: cover;
+    }
+}
+
+/* tablet */
+@media (min-width:768px) and (max-width:1024px) {
+    .h-b-btn {
+        top: 25px;
+        left: 30px;
+        height: 40px;
+    }
+    header {
+        height: 90px;
+    }
+    .h-top {
+        height: 90px;
+    }
+    .h-top > h1 {
+        width: 180px;
+        height: 50px;
+        text-align: center;
+        left: 50%; top: 20px;
+        position: absolute;
+        transform: translateX(-90px);
+    }
+    .h-top h1 a img {
+        width: 100%;
+    }
+    .h-top ul {
+        bottom: -940px
+    }
+    .h-bottom {
+        top: 140px;
+    }
+    .h-bottom nav > ul > li > a {
+        font-size: 2rem;
+        line-height: 80px;
+        margin-top: 50px;
+    }
+    header > label {
+        top: 0;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        padding: 25px;
+        line-height: 90px;
+    }
+    .h-mnu-btn {
+        width: 40px;
+        height: 40px;
+    }
+    /* 서브메뉴 서식 */
+    .lnb {
+        display: none;
+    }
+    .lnb > li > a {
+        font-size: 1rem;
+        line-height: 35px;
+    }
+    .arrow{
+        display: inline-block;
+        width: 1rem; height: 1rem;
+        padding-left: 1rem;
+    }
+    /* 버튼 서식 */
+    .h-btn01,
+    .h-btn02,
+    .h-btn03,
+    .h-on01,
+    .h-on02,
+    .h-on03 {
+        display: block;
+        position: absolute;
+        width: 40px;
+        height: 5px;
+        background: #40352C;
+        transition: 0.4s;
+    }
+    .h-btn01 {
+        top: 5px;
+    }
+    .h-btn02 {
+        top: 20px;
+    }
+    .h-btn03 {
+        top: 35px;
+    }
+    .h-on01 {
+        top: 20px;
+        transform: rotate(45deg);
+    }
+    .h-on03 {
+        top: 20px;
+        transform: rotate(-45deg);
+    }
+    .h-on02 {
+        top: 20px;
+        transform: translateX(40px);
+    }
+    .h-bottom-mnu-img{
+        height: 800px;
+    }
+}
+
+/* mobile */
+@media (min-width:320px) and (max-width:767px) {
+    .h-b-btn {
+        top: 20px;
+        left: 20px;
+        height: 20px;
+    }
+    header {
+        height: 60px;
+    }
+    .h-top {
+        height: 60px;
+    }
+    .h-top > h1 {
+        width: 120px;
+        height: 50px;
+        margin: 0 auto;
+        transform: translateY(5px);
+        text-align: center;
+    }
+    .h-top h1 img {
+        height: 100%;
+    }
+    .h-top ul {
+        bottom: -600px;
+    }
+    .h-bottom nav > ul > li > a {
+        font-size: 1.2rem;
+        line-height: 80px;
+        margin-top: 50px;
+    }
+    header > label {
+        top: 10px;
+        right: 6px;
+        width: 25px;
+        height: 23px;
+        padding: 10px;
+        line-height: 90px;
+    }
+    .h-mnu-btn {
+        width: 25px;
+        height: 25px;
+    }
+    /* 서브메뉴 서식 */
+    .lnb {
+        display: none;
+    }
+    .lnb > li > a {
+        font-size: 1rem;
+        line-height: 35px;
+    }
+    /* 버튼 서식 */
+    .h-btn01,
+    .h-btn02,
+    .h-btn03,
+    .h-on01,
+    .h-on02,
+    .h-on03 {
+        display: block;
+        position: absolute;
+        width: 25px;
+        height: 2px;
+        background: #40352C;
+        transition: 0.4s;
+    }
+    .h-btn01 {
+        top: 0;
+    }
+    .h-btn02 {
+        top: 8px;
+    }
+    .h-btn03 {
+        top: 16px;
+    }
+    .h-on01 {
+        top: 8px;
+        transform: rotate(45deg);
+    }
+    .h-on03 {
+        top: 8px;
+        transform: rotate(-45deg);
+    }
+    .h-on02 {
+        top: 8px;
+        transform: translateX(40px);
+    }
+    .h-bottom-mnu-img{
+        height: 470px;
+    }
+}
+
+/* 푸터서식 */
+
+/* 공통서식 */
+.f-company {
+    font-weight: 600;
+}
+footer {
+    width: 100%;
+    background: #FFF;
+}
+.f-top {
+    position: relative;
+    border-top: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;
+}
+.f-bottom,
+.f-top {
+    margin: 0 auto;
+}
+.f-top > ul a {
+    color: #40352C;
+    line-height: 56px;
+    text-decoration: none;
+}
+.f-info {
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    font-weight: 600;
+    overflow: hidden;
+}
+.f-top > ul li:not(:first-child) {
+    padding-left: 35px;
+}
+.f-top > ul li:not(:last-child)::after {
+    display: block;
+    position: relative;
+    top: -36px;
+    left: 75px;
+    width: 1px;
+    height: 14px;
+    background: #dadada;
+    content: "";
+}
+.f-bottom {
+    display: grid;
+    position: relative;
+}
+/* pc버전 */
+@media (min-width:1025px) {
+
+    /* 1200px 미만시 실행 */
+    @media screen and (min-width:1025px) and (max-width:1199px) {
+        .f-info {
+            display: flex;
+            position: relative;
+            width: 98%;
+            height: 56px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .f-bottom {
+            width: 98%;
+            box-sizing: border-box;
+        }
+        .f-top-btn {
+            position: absolute;
+            top: -203px;
+            right: 0 !important;
+            text-align: center;
+        }
+        .f-middle {
+            display: none;
+            top: 40%;
+        }
+    }
+    .f-info {
+        width: 1200px;
+        height: 56px;
+    }
+    .f-txt-info {
+        font-weight: 600;
+        padding-right: 10px;
+    }
+    .f-bottom {
+        width: 1200px;
+        padding-top: 40px;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(3, 40px);
+    }
+    .f-bottom address,
+    .f-bottom p:not(:nth-child(8)) {
+        padding: 10px 0;
+        font-weight: 200;
+    }
+    .f-bottom p:first-child {
+        order: 1;
+    }
+    .f-bottom p:nth-child(2) {
+        order: 2;
+    }
+    .f-bottom p:nth-child(3) {
+        order: 5;
+    }
+    .f-bottom p:nth-child(4) {
+        order: 3;
+    }
+    .f-bottom p:nth-child(5) {
+        order: 8;
+    }
+    .f-bottom p:nth-child(6) {
+        order: 6;
+    }
+    .f-bottom p:nth-child(7) {
+        order: 9;
+    }
+    .f-bottom p:nth-child(8) {
+        order: 4;
+    }
+    .f-tel-num {
+        font-weight: 600;
+        font-size: 26px;
+        padding-top: 7px;
+    }
+    .adress {
+        height: 40px;
+        order: 7;
+    }
+
+    /* top버튼 */
+    .f-top-btn {
+        position: fixed;
+        bottom:234px;
+        right: 50%;
+        transform: translate(700px);
+    }
+    .f-header {
+        display: none;
+    }
+    .f-btn > a {
+        padding: 16px 13px;
+        background: #83A666;
+        color: #FFF;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 58px;
+        text-decoration: none;
+    }
+    .f-qr-btn {
+        width: 56px;
+        padding-bottom: 10px;
+    }
+    .f-qr-btn a {
+        color: #83A666;
+        line-height: 20px;
+        text-decoration: none;
+    }
+    .f-qr-btn img {
+        width: 100%;
+    }
+}
+
+/* footer tablet, mobile공통서식 */
+@media (min-width:320px) and (max-width:1024px) {
+    .f-bottom,
+    .f-info,
+    .f-top {
+        box-sizing: border-box;
+    }
+    .f-txt-info {
+        height: 3em;
+        font-weight: 600;
+        padding-right: 0.625em;
+    }
+}
+
+/* footer Tablet */
+@media (min-width:768px) and (max-width:1024px) {
+    .f-top {
+        height: 3.5em;
+    }
+    .f-info {
+        margin: 0 2em;
+    }
+    .f-bottom {
+        margin: 0 2em;
+        padding-top: 0.625em;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, 30px);
+    }
+    .f-bottom address,
+    .f-bottom p:not(:nth-child(8)) {
+        padding: 20px 0;
+        font-weight: 200;
+    }
+    .f-bottom p:first-child {
+        order: 3;
+    }
+    .f-bottom p:nth-child(2) {
+        order: 5;
+    }
+    .f-bottom p:nth-child(3) {
+        order: 2;
+    }
+    .f-bottom p:nth-child(4) {
+        order: 7;
+    }
+    .f-bottom p:nth-child(5) {
+        order: 4;
+    }
+    .f-bottom p:nth-child(6) {
+        order: 6;
+    }
+    .f-bottom p:nth-child(7) {
+        order: 8;
+    }
+    .f-bottom p:nth-child(8) {
+        order: 1;
+    }
+    .f-tel-num {
+        font-weight: 600;
+        font-size: 20px;
+        padding-top: 15px;
+    }
+    .adress {
+        height: 40px;
+        text-align: center;
+        order: 9;
+        grid-column: span 2;
+    }
+
+    /* top버튼 */
+    .f-top-btn {
+        position: fixed;
+        right: 2em;
+        bottom:291px;
+    }
+    .f-header {
+        display: none;
+    }
+    .f-btn > a {
+        padding: 18px 13px;
+        background: #83A666;
+        color: #FFF;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 58px;
+        text-decoration: none;
+    }
+    .f-qr-btn {
+        width: 56px;
+        padding-bottom: 10px;
+    }
+    .f-qr-btn a {
+        color: #83A666;
+        font-size: 14px;
+        line-height: 20px;
+        text-decoration: none;
+    }
+    .f-qr-btn img {
+        width: 100%;
+    }
+}
+
+/* footer mobile */
+@media (min-width:320px) and (max-width:767px) {
+    footer {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .f-top {
+        height: 50px;
+    }
+    .f-top > ul a {
+        line-height: 50px;
+    }
+    .f-info {
+        width: 100%;
+        height: 56px;
+        padding: 0 1rem;
+        font-size: 12px;
+        box-sizing: border-box;
+    }
+    .f-top > ul li:not(:last-child)::after {
+        position: relative;
+        top: -32px;
+        left: 55px;
+    }
+    .f-bottom {
+        padding: 0.625em 1rem 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, auto);
+    }
+    .f-bottom address,
+    .f-bottom p:not(:nth-child(8)) {
+        padding: 5px 0;
+        font-weight: 300;
+        font-size: 14px;
+        grid-column: span 2;
+    }
+    .f-bottom p:first-child {
+        order: 2;
+    }
+    .f-bottom p:nth-child(2) {
+        order: 3;
+    }
+    .f-bottom p:nth-child(3) {
+        order: 5;
+    }
+    .f-bottom p:nth-child(4) {
+        order: 4;
+        padding-bottom: 20px;
+    }
+    .f-bottom p:nth-child(5) {
+        order: 6;
+    }
+    .f-bottom p:nth-child(6) {
+        order: 7;
+    }
+    .f-bottom p:nth-child(7) {
+        order: 8;
+        padding-bottom: 30px;
+    }
+    .f-bottom p:nth-child(8) {
+        order: 1;
+    }
+    .f-tel-num {
+        font-weight: 600;
+        font-size: 22px;
+        padding-top: 15px;
+        padding-bottom: 20px;
+    }
+    .adress {
+        height: 40px;
+        text-align: center;
+        order: 9;
+    }
+
+    /* top버튼 */
+    .f-top-btn {
+        position: absolute;
+        bottom:372px;
+        right: 2em
+    }
+    .f-header {
+        display: none;
+    }
+    .f-btn > a {
+        padding: 18px 13px;
+        background: #83A666;
+        color: #FFF;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 58px;
+        text-decoration: none;
+    }
+    .f-qr-btn {
+        width: 56px;
+        padding-bottom: 10px;
+    }
+    .f-qr-btn a {
+        color: #83A666;
+        font-size: 14px;
+        line-height: 20px;
+        text-decoration: none;
+    }
+    .f-qr-btn img {
+        width: 100%;
+    }
+}
+/* modal */
+.modal {
+    display: none;
+}
+
+@media (min-width:1025px) {
+    .modal {
+        position: fixed;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.8);
+        z-index: 9999;
+    }
+    .modal > .b_modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: auto;
+        height: 75vh;
+        margin: 0 auto;
+        transform: translate(-50%, -50%);
+    }
+    .modal > .b_modal > p {
+        line-height: 60px;
+        text-align: center;
+        background-color: #83A666;
+    }
+    .modal > .b_modal img {
+        display: block;
+        height: 100%;
+        object-fit: cover;
+    }
+    .modal input[type=button] {
+        width: 100%;
+        height: 60px;
+        border: none;
+        background: #83A666;
+        color: #fff;
+        font-size: 16px;
+    }
+}
+
+/* TABLET */
+@media (min-width:768px) and (max-width:1024px) {
+    .modal {
+        position: fixed;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.8);
+        z-index: 9999;
+    }
+    .modal > .b_modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: auto;
+        height: 60vh;
+        margin: 0 auto;
+        transform: translate(-50%, -50%);
+    }
+    .modal > .b_modal > p {
+        line-height: 60px;
+        text-align: center;
+        background-color: #83A666;
+    }
+    .modal > .b_modal img {
+        display: block;
+        height: 100%;
+        object-fit: cover;
+    }
+    .modal input[type=button] {
+        width: 100%;
+        height: 60px;
+        border: none;
+        background: #83A666;
+        color: #fff;
+        font-size: 1em;
+    }
+}
+
+/* MOBILE */
+@media (max-width:767px) {
+    .modal {
+        position: fixed;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.8);
+        z-index: 9999;
+    }
+    .modal > .b_modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: auto;
+        height: 40vh;
+        margin: 0 auto;
+        transform: translate(-50%, -50%);
+    }
+    .modal > .b_modal > p {
+        line-height: 40px;
+        text-align: center;
+        background-color: #83A666;
+    }
+    .modal > .b_modal img {
+        display: block;
+        height: 100%;
+        object-fit: cover;
+    }
+    .modal input[type=button] {
+        width: 100%;
+        height: 40px;
+        border: none;
+        background: #83A666;
+        color: #fff;
+        font-size: 0.750em;
+        cursor: pointer;
+    }
+}

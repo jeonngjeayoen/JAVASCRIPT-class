@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스타벅스 실습예제</title>
+  <style>
+    .main{
+      position: relative;
+    }
+    .main img{
+      position: absolute;
+    }
+    .main div>img{
+      display: none;
+    }
+    .bev1{
+      left: 47%;
+      position: absolute;
+      top: 80px;
+    }
+    .bev1 .cup01{
+      left: 230px;
+      top: 10px;
+    }
+    .bev2{
+      left: 45%;
+      position: absolute;
+      top: 240px;
+    }
+    .bev2 .cup02{
+      left: 200px;
+      top: 30px;
+      width: 210px;
+    }
+    .bev3{
+      left: 70%;
+      position: absolute;
+      top: 160px;
+    }
+    .bev3 .cup03{
+      left: -200px;
+      top: 120px;
+    }
+    .badge{
+      left: 80%;
+    }
+    .emblem{
+      left: 15%;
+      top: 90px;
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script>
+    $(function(){
+      $('.bev1>img').delay(500).fadeIn();
+      $('.bev2>img').delay(1000).fadeIn();
+      $('.bev3>img').delay(1500).fadeIn();
+    })
+  </script>
+</head>
+<body>
+  <h2>스타벅스 실습예제</h2>
+  <section>
+    <article class="main">
+      <img src="./images/bev_bg.jpg" alt="">
+      <div class="bev1">
+        <img src="./images/bev1_cup.png" alt="" class="cup01">
+        <img src="./images/bev1_txt.png" alt="">
+      </div>
+      <div class="bev2">
+        <img src="./images/bev2_cup.png" alt="" class="cup02">
+        <img src="./images/bev2_txt.png" alt="">
+      </div>
+      <div class="bev3">
+        <img src="./images/bev3_cup.png" alt="" class="cup03">
+        <img src="./images/bev3_txt.png" alt="">
+      </div>
+      <img src="./images/badge_main_autumn2.png" alt="" class="badge">
+      <img src="./images/m_18_emblem.png" alt="" class="emblem">
+    </article>
+  </section>
+</body>
+</html>

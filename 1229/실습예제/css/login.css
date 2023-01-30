@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+main{
+  padding-top:40px;
+  padding-bottom: 80px;
+}
+.login_form{
+  width:320px;
+  margin:0px auto;
+  text-align:center;
+}
+.login_form > legend{
+  font-size:24px;
+  font-weight: 500;
+  line-height:60px;
+}
+label{
+  display:none;
+}
+label[for='id_save']{
+  display:inline;
+}
+#id_txt,#pw_txt{
+  text-align: center;
+  background-color: #ccc;
+  border: none;
+}
+.login_form>p{
+  margin-bottom:10px;
+}
+.login_form input{
+  width:312px;
+  height:40px;
+}
+input[type=checkbox]{
+  width:16px;height:16px;
+  margin-left: 130px;
+}
+input[type=button]{
+  width:316px;
+  font-weight:bold;
+  border:none;
+}
+.login{
+  background:#f00;
+  color: #fff;
+}
+.naver{
+  background:rgb(12, 175, 12);
+  margin-top: 20px;
+  margin-bottom:10px;
+  color:#fff;
+  box-shadow: 2px 2px 5px #ccc;
+}
+.kakao{
+  background:yellow;
+  color:#333;
+  box-shadow: 2px 2px 5px #ccc;
+}

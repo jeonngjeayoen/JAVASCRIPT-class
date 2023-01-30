@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>쿠팡 팝업창 실습 예제</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <style>
+    header{padding: 0px 300px;}
+    header img{
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+    }
+    header{
+      position: relative;
+      text-align: center;
+      z-index: 0;
+    }
+    header #btn13{
+      position: absolute;
+      right: 1.5%;
+      top: 10px;
+    }
+    header #btn13 i{
+      font-size: 3vw;
+      cursor: pointer;
+    }
+    header #btn14{
+      position: absolute;
+      right: 5%;
+      top: 10px;
+    }
+    header #btn14 i{
+      font-size: 3vw;
+      cursor: pointer;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <script>
+    $(document).ready(function(){
+      let b13 = $('#btn13');      
+      let b14 = $('#btn14');
+      b13.click(function(){
+        $('.popup').slideUp();
+      })
+      b14.click(function(){
+        $('.popup').slideDown();
+      })
+    });
+  </script>
+</head>
+<body>
+  <h3>실습예제. 쿠팡 팝업배너 만들기</h3>
+  <header>
+    <div>
+      <img src="./images/coupang_02.jpg" alt="팝업베너" class="popup">
+    </div>
+    <span id="btn13">
+        <i class="fa-solid fa-x"></i>
+    </span>
+    <span id="btn14">
+      <i class="fa-solid fa-arrow-down"></i>
+    </span>
+    <img src="./exec/coupang_03.jpg" alt="쿠팡헤더">
+    <img src="./exec/coupang_04.jpg" alt="쿠팡네비">
+    <img src="./exec/coupang_05.jpg" alt="쿠팡신학기">
+  </header>
+</body>
+</html>

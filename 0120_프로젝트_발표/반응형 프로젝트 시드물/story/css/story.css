@@ -1,0 +1,672 @@
+@charset "utf-8";
+
+/* 스토리 서식 */
+
+  /* 공통 서식 */
+
+    /* 상단 lnb */
+.st-lnb{
+  color: #40352C;
+  font-size: 16px;
+}
+.st-lnb > span{
+  color: #83A666;
+  font-weight: 600;
+}
+.fa-angle-right{
+  color: #ccc;
+  margin: 0px 5px;
+}
+
+.st-btn:hover{
+  background: #83A666;
+  color: #fff;
+  border: none;
+}
+.st-animal h2{
+  display: none;
+}
+.st-icon h2{
+  display: none;
+}
+.st-icon-container > h2, .st-icon > article > h3{
+  display: none;
+}
+
+    /* 모바일 컨트롤 버튼 */
+.st-control-btn{
+  display: none;
+}
+.st-control-btn{
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  background: #F8F8F8;
+  position: relative;
+  transform: translateX(15px);
+}
+.st-control-btn span{
+  display: inline-block;
+  width: 15px; height: 15px;
+  border-radius: 50%;
+  background: #D9D9D9;
+  margin: 0px 3px;
+  cursor: pointer;
+  position: relative;
+  transform: translateY(-9px)
+}
+.on{
+  background: #83A666 !important;
+}
+#c-btn{
+  display: inline-block;
+  color: #83A666;
+  width: 30px; height: 30px;
+}
+
+  /* PC */
+@media (min-width:1025px) {
+
+  .st-main{
+    width: 1194px;
+    margin: 50px auto;
+  }
+
+  /* about us */
+  .st-aboutus{
+    margin: 50px 0px 30px 0px;
+    display: flex;
+  }
+  .st-aboutus-wrap{
+    width: 378px;
+    height: 500px;
+    background: #83A666;
+    padding: 40px 30px;
+    box-sizing: border-box;
+    position: relative;
+  }
+  .st-aboutus-img{
+    width: 812px;
+    height: 500px;
+    background-image: url(../img/story_bg1.jpg);
+    background-size: cover;
+  }
+  .st-aboutus-wrap > h2{
+    font-size: 26px;
+    color: #fff;
+    font-weight: 300;
+  }
+  .st-eng-title{
+    color: #fff;
+    font-size: 30px;
+    display: block;
+    line-height: 120%;
+  }
+  .st-eng-title-wrap{
+    position: absolute;
+    bottom: 160px;
+  }
+  .st-eng-title:nth-of-type(1){
+    font-weight: 300;
+  }
+  .st-eng-title:nth-of-type(2){
+    font-weight: 800;
+  }
+  .st-eng-title:nth-of-type(3){
+    font-weight: 800;
+  }
+  .st-kor-desc{
+    font-size: 16px;
+    color: #fff;
+    font-weight: 300;
+    line-height: 160%;
+  }
+  .st-kor-desc{
+    display: block;
+  }
+  .st-kor-desc-wrap{
+    position: absolute;
+    bottom: 40px;
+  }
+
+    /* Sidmool Pictogram */
+  .st-icon{
+    height: 830px;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;
+  }
+  .st-icon1, .st-icon2, .st-icon3, .st-icon4{
+    width: 582px; height: 400px;
+    background: #F8F8F8;
+    text-align: center;
+    position: relative;
+  }
+  .st-icon-wrap{
+    width: 100%;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .st-icon-img{
+    width: 100px; height: 100px;
+    border: 3px solid #83A666;
+    border-radius: 50%;
+    display: inline-block;
+    background-repeat: no-repeat;
+  }
+  .i01{
+    background-image: url(../img/icon01.png);
+    background-size: 60px;
+    background-position: 20px 12px;
+  }
+  .i02{
+    background-image: url(../img/icon02.png);
+    background-size: 60px;
+    background-position: 20px 21px;
+  }
+  .i03{
+    background-image: url(../img/icon03.png);
+    background-size: 45px;
+    background-position: 27px 8px;
+  }
+  .i04{
+    background-image: url(../img/icon04.png);
+    background-size: 63px;
+    background-position: 17px 13px;
+  }
+  .st-icon-subtitle{
+    color: #40352C;
+    font-size: 1.5em;
+    font-weight: 300;
+    margin: 0.938em 0em;
+  }
+  .st-icon-title{
+    color: #40352C;
+    font-size: 2.375em;
+    font-weight: bold;
+  }
+  .st-icon-desc{
+    color: #40352C;
+    font-size: 1.125em;
+    line-height: 200%;
+    margin: 0.938em 0em 0em 0em;
+  }
+  
+    /* animal */
+  .st-animal{
+    margin: 30px 0px 130px 0px;
+    display: flex;
+  }
+  .st-animal-wrap{
+    width: 378px;
+    height: 500px;
+    background: #fff;
+    padding: 40px 30px;
+    box-sizing: border-box;
+    position: relative;
+  }
+  .st-animal-img{
+    width: 812px;
+    height: 500px;
+    background-image: url(../img/story_bg2.jpg);
+    background-size: cover;
+  }
+  .st-eng-title2{
+    font-size: 30px;
+    line-height: 120%;
+    color: #40352C;
+    display: block;
+  }
+  .st-eng-title-wrap2{
+    text-align: right;
+    position: absolute;
+    bottom: 200px; right: 0px;
+  }
+  .st-eng-title2:nth-of-type(1){
+    font-weight: 300;
+  }
+  .st-eng-title2:nth-of-type(2){
+    font-weight: 800;
+  }
+  .st-eng-title2:nth-of-type(3){
+    font-weight: 800;
+  }
+  .st-kor-desc2{
+    font-size: 16px;
+    color: #40352C;
+    font-weight: 400;
+    line-height: 160%;
+  }
+  .st-kor-desc2{
+    display: block;
+  }
+  .st-kor-desc-wrap2{
+    position: absolute;
+    text-align: right;
+    bottom: 100px; right: 0px;
+  }
+  .st-btn{
+    width: 306px; height: 55px;
+    border: 1px solid #40352C;
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: center;
+    line-height: 55px;
+    position: absolute;
+    bottom: 0px; right: 0px;
+  }
+
+
+}
+
+  /* Tablet */
+@media (min-width:768px) and (max-width:1024px) {
+  html, body{
+    overflow-x: hidden;
+  }
+
+  .st-main{
+    width: 100%;
+    margin: 100px auto;
+    padding: 50px 30px 0px 30px;
+    box-sizing: border-box;
+  }
+
+  /* about us */
+  .st-aboutus{
+    margin: 50px 0px 30px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    order: 2;
+  }
+  .st-aboutus-wrap{
+    width: 100%;
+    height: 260px;
+    background: #83A666;
+    padding: 40px 25px;
+    box-sizing: border-box;
+    order: 1;
+  }
+  .st-aboutus-img{
+    width: 100%;
+    height: 450px;
+    background-image: url(../img/story_bg1.jpg);
+    background-size: cover;
+  }
+  .st-aboutus-wrap > h2{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 300;
+  }
+  .st-eng-title{
+    color: #fff;
+    font-size: 26px;
+    line-height: 140%;
+  }
+  .st-eng-title:first-child{
+  display: block;
+  }
+  .st-eng-title-wrap{
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  .st-eng-title:nth-of-type(1){
+    font-weight: 300;
+  }
+  .st-eng-title:nth-of-type(2){
+    font-weight: 800;
+  }
+  .st-eng-title:nth-of-type(3){
+    font-weight: 800;
+  }
+  .st-kor-desc{
+    font-size: 16px;
+    color: #fff;
+    font-weight: 300;
+    line-height: 160%;
+  }
+
+    /* Sidmool Pictogram */
+  .st-icon{
+    height: 830px;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;
+  }
+  .st-icon1, .st-icon2, .st-icon3, .st-icon4{
+    width: 48.5%; height: 400px;
+    background: #F8F8F8;
+    text-align: center;
+    position: relative;
+  }
+  .st-icon-wrap{
+    width: 100%;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .st-icon-img{
+    width: 100px; height: 100px;
+    border: 3px solid #83A666;
+    border-radius: 50%;
+    display: inline-block;
+    background-repeat: no-repeat;
+  }
+  .i01{
+    background-image: url(../img/icon01.png);
+    background-size: 60px;
+    background-position: 20px 12px;
+  }
+  .i02{
+    background-image: url(../img/icon02.png);
+    background-size: 60px;
+    background-position: 20px 21px;
+  }
+  .i03{
+    background-image: url(../img/icon03.png);
+    background-size: 45px;
+    background-position: 27px 8px;
+  }
+  .i04{
+    background-image: url(../img/icon04.png);
+    background-size: 63px;
+    background-position: 17px 13px;
+  }
+  .st-icon-subtitle{
+    color: #40352C;
+    font-size: 1.25em;;
+    font-weight: 300;
+    margin: 0.938em 0em;
+  }
+  .st-icon-title{
+    color: #40352C;
+    font-size: 2em;
+    font-weight: bold;
+  }
+  .st-icon-desc{
+    color: #40352C;
+    font-size: 1em;
+    line-height: 2.0em;
+    margin-top: 1em;
+  }
+  
+    /* animal */
+  .st-animal{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  .st-animal-wrap{
+    width: 100%;
+    background: #fff;
+    box-sizing: border-box;
+  }
+  .st-animal-img{
+    width: 100%;
+    height: 500px;
+    background-image: url(../img/story_bg2.jpg);
+    background-size: cover;
+  }
+  .st-eng-title2{
+    font-size: 26px;
+    line-height: 120%;
+    color: #40352C;
+    display: block;
+  }
+  .st-eng-title-wrap2{
+    text-align: left;
+    margin-top: 30px;
+  }
+  .st-eng-title2:nth-of-type(1){
+    font-weight: 300;
+  }
+  .st-eng-title2:nth-of-type(2){
+    font-weight: 800;
+  }
+  .st-eng-title2:nth-of-type(3){
+    font-weight: 800;
+  }
+  .st-kor-desc2{
+    font-size: 16px;
+    color: #40352C;
+    font-weight: 400;
+    line-height: 160%;
+  }
+  .st-kor-desc2{
+    display: block;
+  }
+  .st-kor-desc-wrap2{
+    text-align: left;
+    margin-top: 20px;
+  }
+  .st-btn{
+    width: 306px; height: 55px;
+    border: 1px solid #40352C;
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: center;
+    line-height: 55px;
+    position: absolute;
+    bottom: 0px; right: 0px;
+  }
+  .st-eng-title2:nth-of-type(2), .st-eng-title2:nth-of-type(3){
+    display: inline;
+  }
+
+
+}
+
+  /* Mobile */
+@media (min-width:320px) and (max-width:767px) {
+
+
+  .st-main{
+    width: 100%;
+    margin: 100px auto;
+    padding: 20px 15px 0px 15px;
+    box-sizing: border-box;
+  }
+
+  /* about us */
+  .st-aboutus{
+    margin: 50px 0px 30px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    order: 2;
+  }
+  .st-aboutus-wrap{
+    width: 100%;
+    height: 350px;
+    background: #83A666;
+    padding: 40px 25px;
+    box-sizing: border-box;
+    order: 1;
+  }
+  .st-aboutus-img{
+    width: 100%;
+    height: 450px;
+    background-image: url(../img/story_bg1.jpg);
+    background-size: cover;
+  }
+  .st-aboutus-wrap > h2{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 300;
+  }
+  .st-eng-title{
+    color: #fff;
+    font-size: 26px;
+    line-height: 140%;
+    display: block;
+  }
+  .st-eng-title-wrap{
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  .st-eng-title:nth-of-type(1){
+    font-weight: 300;
+  }
+  .st-eng-title:nth-of-type(2){
+    font-weight: 800;
+  }
+  .st-eng-title:nth-of-type(3){
+    font-weight: 800;
+  }
+  .st-kor-desc{
+    font-size: 16px;
+    color: #fff;
+    font-weight: 300;
+    line-height: 160%;
+    display: block;
+  }
+  
+
+    /* Sidmool Pictogram */
+  .st-icon-container{
+    width: 100%;
+    height: 450px;
+    background: #F8F8F8;
+    overflow-x: hidden;
+  }
+  .st-icon{
+    width: 412%;
+    gap: 1%;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    position: relative; left: 0;
+    transition: 0.6s;
+  }
+  .st-icon1, .st-icon2, .st-icon3, .st-icon4{
+    width: 100%;
+    text-align: center;
+    position: relative;
+    transform: translateX(0%);
+  }
+  .st-icon-wrap{
+    width: 100%;
+    position: absolute; 
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .st-icon-img{
+    width: 100px; height: 100px;
+    border: 3px solid #83A666;
+    border-radius: 50%;
+    display: inline-block;
+    background-repeat: no-repeat;
+  }
+  .i01{
+    background-image: url(../img/icon01.png);
+    background-size: 60px;
+    background-position: 20px 12px;
+  }
+  .i02{
+    background-image: url(../img/icon02.png);
+    background-size: 60px;
+    background-position: 20px 21px;
+  }
+  .i03{
+    background-image: url(../img/icon03.png);
+    background-size: 45px;
+    background-position: 27px 8px;
+  }
+  .i04{
+    background-image: url(../img/icon04.png);
+    background-size: 63px;
+    background-position: 17px 13px;
+  }
+  .st-icon-subtitle{
+    color: #40352C;
+    font-size: 1.25em;;
+    font-weight: 300;
+    margin: 0.938em 0em;
+  }
+  .st-icon-title{
+    color: #40352C;
+    font-size: 2em;
+    font-weight: bold;
+  }
+  .st-icon-desc{
+    color: #40352C;
+    font-size: 1em;
+    line-height: 2.0em;
+    margin-top: 1em;
+  }
+  .st-control-btn{
+    display: block;
+  }
+
+    /* animal */
+  .st-animal{
+    margin-top: 30px;
+    margin-bottom: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  .st-animal-wrap{
+    width: 100%;
+    background: #fff;
+    box-sizing: border-box;
+  }
+  .st-animal-img{
+    width: 100%;
+    height: 400px;
+    background-image: url(../img/story_bg2.jpg);
+    background-size:cover;
+  }
+  .st-eng-title2{
+    font-size: 26px;
+    line-height: 120%;
+    color: #40352C;
+    display: block;
+  }
+  .st-eng-title-wrap2{
+    text-align: left;
+    margin-top: 30px;
+  }
+  .st-eng-title2:nth-of-type(1){
+    font-weight: 300;
+  }
+  .st-eng-title2:nth-of-type(2){
+    font-weight: 800;
+  }
+  .st-eng-title2:nth-of-type(3){
+    font-weight: 800;
+  }
+  .st-kor-desc2{
+    font-size: 16px;
+    color: #40352C;
+    font-weight: 400;
+    line-height: 160%;
+  }
+  .st-kor-desc2{
+    display: block;
+  }
+  .st-kor-desc-wrap2{
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 90px;
+  }
+  .st-btn{
+    width: 100%; height: 55px;
+    border: 1px solid #40352C;
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: center;
+    line-height: 55px;
+    position: absolute;
+    bottom: 0px; right: 0px;
+  }
+  .st-eng-title2:nth-of-type(2), .st-eng-title2:nth-of-type(3){
+    display: inline;
+  }
+
+
+}

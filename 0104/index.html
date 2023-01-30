@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자바스크립트 문서객체모델_속성값을 활용한 상품 미리보기 콘텐츠</title>
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  .product{
+    margin: 0 auto;
+    width: 1200px;
+    padding: 60px 0 0 60px;
+  }
+  img{
+    box-sizing: border-box;
+  }
+  ul{
+    display: flex;
+  }
+  li{
+    list-style: none;
+  }
+  li img{
+    width: 95px;
+  }
+  .photo{
+    float: left;
+  }
+  .txt{
+    position: relative;
+    left: 50px;
+  }
+  .txt>h3>span{
+    font-size: 13px;
+  }
+  .txt>h3>span:first-child{
+    color: #d50000;
+  }
+  .txt>h3>span:nth-child(2){
+    color: #000;
+  }
+  .txt>h3>.soid{
+    right: 250px;
+    position: absolute;
+  }
+  .txt>h3:after{
+    content: "";
+    border-bottom:1px solid #ccc ;
+    width: 470px;
+    display: block;
+    position: absolute;
+    right: 250px;
+    top: 40px;
+  }
+  li:focus>img{
+    box-sizing: border-box;
+    outline: 2px solid #d50000;
+  }
+  .txt>h3>p{
+    margin-top: 20px;
+  }
+  .txt>p{
+    font-size: 40px;
+  }
+  .txt>p:nth-child(2):after{
+    content: "";
+    border-bottom:1px solid #ccc ;
+    width: 470px;
+    display: block;
+    position: absolute;
+    right: 250px;
+    top: 180px;
+  }
+  .txt>p:nth-child(3){
+    font-size: 15px;
+    padding: 10px 20px;
+    position: absolute;
+    top: 230px;
+  }
+  .txt span{
+    color: #d50000;
+  }
+  .txt a{
+    font-size: 15px;
+    color: #000;
+    text-decoration: none;
+    border: 1px solid #000;
+    padding: 0 4px;
+  }
+  .txt .point{
+    background-color: rgb(224, 224, 224);
+    display: inline;
+    padding: 0px 10px;
+  }
+  .txt .point>a{
+    border: none;
+  }
+</style>
+<body>
+  <h2>자바스크립트 문서객체모델_속성값을 활용한 상품 미리보기 콘텐츠</h2>
+  <p>이미지 5장을 사용하여 썸네일 이미지를 클릭시 큰사진이 보이게 하기</p>
+
+  <section class="product">
+    <article class="photo">
+      <img src="./images2/photo01.jpg" alt="미리보기" id="big_img">
+      <!-- 썸네일 클릭시 해당 속성 src값을 변수에 담아서 출력해본다.-->
+      <ul>
+        <li><img src="./images2/photo01.jpg" alt="썸네일" id="p01" class="on"></li>
+        <li><img src="./images2/photo02.jpg" alt="썸네일" id="p02"></li>
+        <li><img src="./images2/photo03.jpg" alt="썸네일" id="p03"></li>
+        <li><img src="./images2/photo04.jpg" alt="썸네일" id="p04"></li>
+        <li><img src="./images2/photo05.jpg" alt="썸네일" id="p05"></li>
+      </ul>
+    </article>
+    <article class="txt">
+      <h3>
+        <span>오늘 마감</span><span class="soid">59개 구매</span>
+        <p>[최대 40%쿠폰] 머렐 헤비다운 외 스포츠 특가</p>
+      </h3>
+      <p>
+        <span>10%</span> 151,200원~ 
+        <a href="#" title="혜택보기">혜택보기</a>
+      </p>
+      <p class="point">
+        <a href="#" title="적립금">구매 전 적립금 5,000원 받기</a>
+        <a href="#" title="무이자">카드 무이자 혜택보기(최대 6개월)</a>
+      </p>
+    </article>
+  </section>
+  <script>
+    //#bulb를 클릭시 src속성값을 가져와서 출력해보기
+    let big = document.getElementById('big_img');
+    let img_src = big.getAttribute('src'); //src속성값을 가져와서 변수에 담는다.
+    console.log(img_src); //출력해본다.
+    let a = document.getElementById('p01');
+    let b = document.getElementById('p02');
+    let c = document.getElementById('p03');
+    let d = document.getElementById('p04');
+    let e = document.getElementById('p05');
+
+    a.addEventListener('click', function(){ //이미지를 클릭하면
+      big.setAttribute('src','./images2/photo01.jpg'); //속성 src값을 변경한다.
+        b.style.border='none';//모두 서식을 제거하고 
+        c.style.border='none';//모두 서식을 제거하고 
+        d.style.border='none';//모두 서식을 제거하고 
+        e.style.border='none';//모두 서식을 제거하고 
+        this.style.border='2px solid blue'; 
+    });
+    b.addEventListener('click', function(){ //이미지를 클릭하면
+      big.setAttribute('src','./images2/photo02.jpg'); //속성 src값을 변경한다.
+        a.style.border='none';//모두 서식을 제거하고 
+        c.style.border='none';//모두 서식을 제거하고 
+        d.style.border='none';//모두 서식을 제거하고 
+        e.style.border='none';//모두 서식을 제거하고 
+        this.style.border='2px solid blue'; //선택한 썸네일 이미지에 테두리적용
+    });
+    c.addEventListener('click', function(){ //이미지를 클릭하면
+      big.setAttribute('src','./images2/photo03.jpg'); //속성 src값을 변경한다.
+      a.style.border='none';//모두 서식을 제거하고 
+      b.style.border='none';//모두 서식을 제거하고 
+      d.style.border='none';//모두 서식을 제거하고 
+      e.style.border='none';//모두 서식을 제거하고 
+      this.style.border='2px solid blue';
+    });
+    d.addEventListener('click', function(){ //이미지를 클릭하면
+      big.setAttribute('src','./images2/photo04.jpg'); //속성 src값을 변경한다.
+      a.style.border='none';//모두 서식을 제거하고 
+      b.style.border='none';//모두 서식을 제거하고 
+      c.style.border='none';//모두 서식을 제거하고 
+      e.style.border='none';//모두 서식을 제거하고 
+      this.style.border='2px solid blue';
+    });
+    e.addEventListener('click', function(){ //이미지를 클릭하면
+      big.setAttribute('src','./images2/photo05.jpg'); //속성 src값을 변경한다.
+      a.style.border='none';//모두 서식을 제거하고 
+      b.style.border='none';//모두 서식을 제거하고 
+      c.style.border='none';//모두 서식을 제거하고 
+      d.style.border='none';//모두 서식을 제거하고 
+      this.style.border='2px solid blue';
+    });
+    
+  </script>
+</body>
+</html>
