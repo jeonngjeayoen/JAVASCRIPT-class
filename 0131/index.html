@@ -23,6 +23,47 @@
         return false;
       });
 
+      // 화면스크롤 값 출력해보기
+      $(window).scroll(function(){
+        let spos = $(this).scrollTop();
+        console.log($(this).scrollTop());
+
+        //만약에 아래 해당하는 조건범위에 맞는 a요소에 서식 적용하기
+        // if(spos>=50&&spos<=950){
+        //   $('.gnb li a').removeClass('t_act');
+        //   $('.gnb li:first-child a').addClass('t_act');
+        // }else if(spos>=950&&spos<=1850){
+        //   $('.gnb li a').removeClass('t_act');
+        //   $('.gnb li:nth-child(2) a').addClass('t_act');
+        // }else if(spos>=1850&&spos<=2750){
+        //   $('.gnb li a').removeClass('t_act');
+        //   $('.gnb li:nth-child(3) a').addClass('t_act');
+        // }else if(spos>=2750&&spos<=3650){
+        //   $('.gnb li a').removeClass('t_act');
+        //   $('.gnb li:nth-child(4) a').addClass('t_act');
+        // }else if(spos>=3650&&spos<=4550){
+        //   $('.gnb li a').removeClass('t_act');
+        //   $('.gnb li:nth-child(5) a').addClass('t_act');
+        // }else if(spos>=4550&&spos<=5450){
+        //   $('.gnb li a').removeClass('t_act');
+        //   $('.gnb li:nth-child(6) a').addClass('t_act')
+        // }else if(spos>=5450&&spos<=6450){
+        //   $('.gnb li a').removeClass('t_act');
+        //   $('.gnb li:nth-child(7) a').addClass('t_act')
+        // }
+
+        //offset메서드로 각각 해당하는 박스의 위치값에 따른 서식적용하기
+        $('main section').each(function(i){
+            let top = $(this).offset().top-60;
+            if(spos >= top){ //만약에 spos의 값이 top보다 크면
+              $('.gnb li a').removeClass('t_act'); //기존 서식을 제거
+              //해당메뉴에 서식적용한다.
+              $('.gnb li').eq(i).find('a').addClass('t_act'); 
+            }
+          });
+
+      });
+
     });
   </script>
 </head>
