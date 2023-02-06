@@ -286,8 +286,7 @@ main > section{}
 /* 좌, 우 슬라이드 서식 */
 #event .slide-wrapper{
   width: 1200px;
-  height: 300px;
-  border: 1px solid #000;
+  height: 320px;
   margin: 0 auto;
   overflow: hidden;position: relative;
 }
@@ -330,8 +329,8 @@ main > section{}
   border-radius: 50%;
   margin-right: 5px;
 }
-.control_btn span.on{
-  background: var(--bg-color01);
+.control_btn span.On{
+  background: var(--t-color03);
 }
 /* 모달 서식 */
 .modal{

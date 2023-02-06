@@ -15,9 +15,9 @@ $(function(){
     slide.style.left=(img_w+m)*-n+'px';
     count = n;
     for(let j=0; j<ctrl_btn.length; j++){
-      ctrl_btn[j].classList.remove('on');
+      ctrl_btn[j].classList.remove('On');
     }
-    ctrl_btn[n].classList.add('on');
+    ctrl_btn[n].classList.add('On');
   }
 
   prev_btn.addEventListener('click', function(){ 
@@ -42,9 +42,9 @@ $(function(){
     ctrl_btn[i].addEventListener('click', function(){
       mslide(i);
       for(let j=0; j<ctrl_btn.length; j++){
-        ctrl_btn[j].classList.remove('on');
+        ctrl_btn[j].classList.remove('On');
       }
-      ctrl_btn[i].classList.add('on');
+      ctrl_btn[i].classList.add('On');
     });
   }
     let Timer = setInterval(function(){
