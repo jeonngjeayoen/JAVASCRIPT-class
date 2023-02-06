@@ -1,0 +1,216 @@
+@charset "utf-8";
+
+/* 헤더서식 */
+header{
+  width:100%;
+  height:70px;
+  position:fixed;
+  top:0px;left:0px;
+  z-index:1000;
+}
+header > h1{
+  padding:24px 0px 0px 2%;
+}
+header i.fas{
+  position:absolute;
+  top:24px;
+  font-size:1.6rem;
+  color:var(--t-color02);
+  cursor:pointer;
+}
+header i.fa-user {right: 4%;}
+header i.fa-bell {right: 2%;}
+
+header nav{
+  width:600px;
+  margin:-24px auto 0px auto;
+}
+header .gnb{
+  display:flex;
+  justify-content:space-around;
+}
+header .gnb > li > a{
+  font-size:1.2rem;
+  color:var(--t-color02);
+}
+
+/* 화면이 스크롤되면 적용되는 서식 */
+/* nav a에 적용, 알람, 로그인 아이콘 적용 */
+.on{
+  color:var(--t-color01) !important;
+}
+/* heaer배경 */
+.h_on{
+  background:rgba(255,255,255,0.9) !important;
+}
+
+
+/* 메인 내비게이션 */
+#m_nav{
+  position: fixed;
+  right: 50px; top: 200px;
+  z-index: 9999999;
+}
+#m_nav ul{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+#m_nav ul li{
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 50px;
+  margin-top: 30px;
+  text-align: center;
+  border-radius: 40px;
+  transition: 0.4s;
+  overflow: hidden;
+}
+#m_nav ul li span{
+  position: absolute;
+  width: 50px; height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  background: var(--t-color03);
+  color: #fff;
+  cursor: pointer;
+}
+#m_nav ul li a{
+  display: inline-block;
+  width: 200px; height: 50px;
+  border-radius: 50px;
+  line-height: 50px;
+  color: #fff;
+}
+#m_nav ul li:hover{
+  width: 200px;
+}
+#m_nav ul li:hover span{
+  background: var(--bg-color01);
+}
+/* 섹션02 */
+#top3{
+  text-align: center;
+  width: 100%;
+  background: #fff!important;
+}
+#top3 .title h2{
+  font-size: 40px;
+  line-height: 60px;
+  font-weight: bold;
+}
+#top3 .title>p{
+  font-size: 18px;
+  line-height: 40px;
+}
+/* 슬라이드 */
+#top3 .main_slide .num01{
+  font-size: 15px;
+  border: 1px solid var(--t-color03);
+  width: 70px;
+  display: block;
+  line-height: 30px;
+  color: var(--t-color03);
+  margin: 0 auto;
+  border-radius:30px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+#top3 .main_slide{
+  width: 1200px;
+  height: 720px;
+  margin: 0 auto;
+}
+#top3 .main_slide h3{
+  font-size: 25px;
+  color: var(--bg-color02);
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+#top3 .swiper-wrapper{
+  position: relative;
+}
+#top3 .main_slide img{
+  width: 500px;
+  margin-top: 80px;
+}
+#top3 .txt_box{
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  text-align: left;
+  line-height: 25px;
+  margin: 30px 0 0 0;
+  font-weight:550
+}
+#top3 .txt_box .color01{
+ width: 60px;
+ height: 40px;
+ display: inline-block;
+}
+#top3 .txt_box li{
+  margin:0 20px;
+}
+#top3 .txt_box li::after{
+  display: block;
+  content: "";
+  height: 40px;
+  border-right: 2px solid #ccc;
+  position: relative;
+  left: 18px;
+  top: -44px;
+}
+#top3 .txt_box li:nth-child(5):after,#top3 .txt_box li:nth-child(4):after{
+    left: 20px;
+}
+#top3 .txt_box li:first-child::after,#top3 .txt_box li:nth-child(3)::after,#top3 .txt_box li:last-child::after{
+  border: none;
+}
+#top3 .txt_box li:first-child,#top3 .txt_box li:nth-child(3){
+  margin-right:-12px;
+  margin-top: 6px;
+}
+#top3 .txt_box .black{
+  background: #313131;
+}
+#top3 .txt_box .red{
+  background: linear-gradient(90.15deg, #AF0B0B 0.12%, rgba(235, 73, 73, 0.65448) 96.43%);
+}
+#top3 .txt_box .blue{
+  background: linear-gradient(90.15deg, #0240B7 0.12%, rgba(98, 120, 162, 0.65448) 96.43%);
+}
+#top3 .txt_box .kakhi{
+  background: linear-gradient(90.15deg, #3C3C3E 0.12%, rgba(39, 58, 96, 0.65448) 96.93%);
+}
+#top3 .txt_box li:last-child{
+  margin-top: 10px;
+}
+#top3 .txt_box li strong{
+  color: var(--bg-color02);
+  font-size: 35px;
+  margin-bottom:-50px;
+}
+#top3 .txt_box li strong span{
+  font-size: 18px;
+}
+.swiper-slide button{
+  width: 240px;
+  height: 40px;
+  font-size: 15px;
+  font-family: 'Noto Sans KR';
+  margin-top: 0px;
+  border: 2px solid var(--t-color01);
+  position: relative;
+  background: #fff;
+  cursor: pointer;
+}
+.swiper-slide button::after{
+  position: absolute;
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-right: 1.7px solid var(--t-color01);
+  border-bottom: 1.7px solid var(--t-color01);
+  content: "";
+  transform: rotate(-45deg);
+  top: 14.7px;
+}
