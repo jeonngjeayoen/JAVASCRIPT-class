@@ -307,6 +307,7 @@ main > section{}
   height: 50px;
   background: rgba(255, 255, 255, 0.5);
   line-height: 50px;
+  cursor: pointer;
 }
 #left_btn{
   float: left;
@@ -328,6 +329,7 @@ main > section{}
   background: #fff;
   border-radius: 50%;
   margin-right: 5px;
+  cursor: pointer;
 }
 .control_btn span.On{
   background: var(--t-color03);
