@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>광동제약 반응형 웹</title>
+  <!-- 초기화 -->
+  <link href="./css/reset.css" rel="stylesheet" type="text/css">
+  <!-- 기본서식 -->
+  <link href="./css/base.css" rel="stylesheet"  type="text/css">
+  <!-- 공통서식 -->
+  <link href="./css/common.css" rel="stylesheet" type="text/css">
+  <!-- 메인서식 -->
+  <link href="./css/main.css" rel="stylesheet" type="text/css">
+    <!-- 아이콘폰트 주소 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- 벤더프리픽스 -->
+  <script src="./script/prefixfree.min.js"></script>
+  <!-- 제이쿼리라이브러리 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <!-- 제이쿼리 ui -->
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script src="./script/main.js" defer></script>
+</head>
+<body>
+  <!-- 상단헤더영역 -->
+  <header>
+    <h1>
+      <a href="index.html" title="메인페이지로 바로가기">
+        <img src="./images/pngegg_2.png" alt="상단로고">
+      </a>
+    </h1>
+    <nav class="gnb">
+      <ul>
+        <li><a href="#" title="광동제약">광동제약<i class="fas fa-angle-down"></i></a>
+          <ul class="sub">
+						<li><a href="#" title="회사소개">회사소개</a></li>
+						<li><a href="#" title="CEO 소개">CEO 소개</a></li>
+						<li><a href="#" title="오시는 길">오시는 길</a></li>
+					</ul>
+        </li>
+        <li><a href="#" title="제품소개">제품소개<i class="fas fa-angle-down"></i></a>
+          <ul class="sub">
+            <li><a href="#" title="일반의약품">일반의약품</a></li>
+            <li><a href="#" title="전문의약품">전문의약품</a></li>
+            <li><a href="" title="원료의약품">원료의약품</a></li>
+					</ul>
+        </li>
+        <li><a href="#" title="홍보센터">홍보센터<i class="fas fa-angle-down"></i></a>
+          <ul class="sub">
+						<li><a href="#" title="영상광고">영상광고</a></li>
+						<li><a href="#" title="라디오광고">라디오광고</a></li>
+						<li><a href="#" title="프린터광고">프린터광고</a></li>
+					</ul>
+        </li>
+        <li><a href="#" title="미에로 이벤트">윤리경영<i class="fas fa-angle-down"></i></a>
+          <ul class="sub">
+            <li><a href="sub04_01.html" title="부패방지방침">부패방지방침</a></li>
+            <li><a href="sub04_02.html" title="윤리강령">윤리강령</a></li>
+        </ul>
+        </li>
+        <li><a href="#" title="공지사항">공지사항</a></li>
+        <li>
+          <span class="search_box">
+            <input type="text" name="search" class="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </span>
+        </li>
+      </ul>
+      
+      <div class="sub_bg"></div>
+    </nav>
+  </header>
+
+  <!-- 메인콘텐츠 영역 -->
+  <main>
+    <!-- 슬라이드 -->
+    <section id="visual_slide">
+      <h2>메인슬라이드</h2>
+      <div>
+          <span>내가 찍은 광고 영상이 비타500tv로<br> 온에어됩니다</span>
+          <img src="./images/visual01.jpg" alt="메인이미지01">
+      </div>
+      <div>
+        <span>광동 V라인<br>옥수수 수염차</span>
+        <img src="./images/visual02.jpg" alt="메인이미지02">
+      </div>
+      <div>
+        <span>광동 진한<br>헛개차 </span>
+        <img src="./images/visual03.jpg" alt="메인이미지03">
+      </div>
+      <div>
+        <span>골프에 최적화된 액티비티 드링크<br> 광동온더그린</span>
+        <img src="./images/visual04.jpg" alt="메인이미지04">
+      </div>
+<!--		 sns아이콘 -->
+      <ul class="sns">
+        <li><a href="#" title="facebook"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="#" title="instagram"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="#" title="youtube"><i class="fab fa-youtube"></i></a></li>
+      </ul>
+      <!--   		좌, 우 방향버튼 -->
+      <ul class="s_btn">
+        <li><img src="./images/left.png" alt="이전버튼"></li>
+        <li><img src="./images/right.png" alt="다음버튼"></li>
+      </ul>
+    <!--   		콘트롤버튼 -->
+        <ul class="ctrl_btn">
+          <li class="on">&nbsp;</li>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+        </ul>
+    </section>
+
+    <!-- 2. 뉴스 -->
+    <section id="new">
+      <article class="news">
+        <h2><span>건강은 생활의 감동</span> 광동제약®</h2>
+        <input type="radio" name="a" id="tab01" checked />
+        <label for="tab01"><img src="./images/menu01_on.png" alt="" class="s_big"></label>
+        <input type="radio" name="a" id="tab02" />
+        <label for="tab02"><img src="./images/suyum_off.png" alt="" class="s_big"></label>
+        <input type="radio" name="a" id="tab03" />
+        <label for="tab03"><img src="./images/hut_new_off.png" alt="" class="s_big"></label>
+        <input type="radio" name="a" id="tab04" />
+        <label for="tab04"><img src="./images/onthe_off.png" alt="" class="s_big"></label>
+
+        <h2 class="h_02"><span>광동제약의 대표 상품들을 만나 보세요!</span>광동제약 BEST</h2>
+        <div class="news_list01">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/v8DSuVfITMo" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="news_list02">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/oUZIfgasObQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="news_list03">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/oCnSOonktIs" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="news_list04">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/7F-CBbVzfoo" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </article>
+    </section>
+
+    <!-- 3. 탭콘텐츠 -->
+    <section id="tab_con">
+      <article class="tcon">
+        <h2 class="c_title">광동의 제품 컨셉</h2>
+        <ul>
+          <li>
+            <a href="#" title="" class="tab_on">비타 500</a>
+            <div class="cont"><span>비타 500의 컨셉</span>
+              2001년 비타500 출시 당시, 기존 비타민 C 시장 강력한<br> 
+              경쟁 브랜드와의 직접적인 경쟁을 피하면서갈 수 있는 시장이 무엇일까 <br>
+              많은 고민을 끝에 기존 과열 경쟁 시장인 레드오션(Red Ocean)을 피하고<br>
+              블루오션(Blue Ocean)으로 나아가게 되었습니다. 결국, 치열한 경쟁하는 방법 <br>
+              대신 창조적 사고를 통해 발견한 틈새시장에 출사표를 던졌으며, <br>
+              ‘마시는 비타민C’라는 기능성 드링크 비타500을 출시하게 되었습니다.
+              <img src="./images/img_info02n.png" alt="비타500">
+          </li>
+          <li>
+            <a href="#" title="">옥수수 수염차</a>
+            <div class="cont"><span>옥수수 수염차의 컨셉</span>
+              옛 문헌에서 몸에 좋은 것으로 알려진 옥수수수염을 접한
+              광동제약 연구팀이 <br>
+              옥수수수염차를 개발하였으며,
+              전통적인 옥수수차의 구수한 맛과 <br>옥수수수염이 가미된 음료로
+              출시된 옥수수수염차에 대한 고객들의 반응은 <br>매우 뜨거웠으며,
+              특히 여성 고객층을 타켓으로 한 “V라인” 마케팅을<br> 통해 연일 매출 신기록을 경신하였습니다.
+              그러나 단지 마케팅의 힘만으로 높은 <br>신장률을 유지할 수 있었던 것은 아니며,
+              타의 추종을 허락하지 않는풍미와<br> 완벽한 품질관리가 바로 광동 옥수수수염차의 힘 입니다.<br>
+              <img src="./images/img_oksusu01_new.png" alt="옥수수 수염차">
+          </li>
+          <li>
+            <a href="#" title="">헛개차</a>
+            <div class="cont"><span>헛개차의 컨셉</span>
+              헛개나무열매농축액을 주원료로 사용하여 음주 후 숙취해소에 탁월한 차음료입니다.<br>
+              헛개나무열매 특유의 구수한 향과 맛으로 남녀노소 누구나 <br>
+              즐길 수 있으며 대한민국 헛개소재 차음료의 No.1 제품입니다. (2018년 AC닐슨 기준)<br>
+              제품특징 :음주 후 숙취해소 전용 차음료 “숙취해소 찐하게 풀자” <br>
+              헛개나무열매 추출 농축액 17,500mg 함유(340㎖기준)<br>
+              헛개나무 부위 중 알코올 분해 기능이 가장 좋다는 열매만을 사용한자 <br>
+              “男”을 활용해 진하고 강한 기능성 차음료임을 표현한 패키지 디자인
+              <img src="./images/img_info01_n.png" alt="헛개차">
+          </li>
+          <li>
+            <a href="#" title="">광동 온핏</a>
+            <div class="cont"><span>광동온핏의 컨셉</span>
+              광동제약만의 60년 건강 노하우와 과학적인 설계로 탄생한 음료 브랜드,<br>
+              "On The"는 다양한 액티비티에 맞는 최적화된 가치를 추구합니다.
+              <br>
+              내 몸의 수분은 물론 일상 속 다양한 액티비티의 최적화된 제품으로
+              <br>
+              광동제약만의 과학적 설계와 배합으로 내 몸의 에너지까지 충전해 줍니다.<br>
+              일상 속 다양한 액티비티를 하시는 분, 업무나 공부로 인해 지치는 분,
+              <br>
+              카페인으로 충전하고 싶으신 분, 활기찬 아침으로 하루를 <br>
+              시작하고 싶으신 분들에게 필요합니다.
+              <img src="./images/onfit.jpg" alt="광동온핏">
+          </li>
+        </ul>
+      </article> 
+    </section>
+
+    <!-- 4. 제품소개 -->
+    <section id="item">
+      <article class="i_con">
+        <h2 class="c_title">제품 패키지 소개</h2>
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- 5.  이벤트 -->
+    <section>
+      <h2>이벤트</h2>
+    </section>
+
+    <!-- 6. 갤러리 -->
+    <section>
+      <h2>갤러리</h2>
+    </section>
+  </main>
+
+  <!-- 푸터영역 -->
+  <footer></footer>
+</body>
+</html>
