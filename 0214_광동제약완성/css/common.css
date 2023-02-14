@@ -1,0 +1,212 @@
+@charset "utf-8";
+
+/* 헤더영역서식 */
+header{
+  width:100%; height:100px;
+  position:absolute;
+  top:0px;left:0px;
+  z-index:99999;
+  background-image: url(../images/bg_header.png);
+  background-repeat: no-repeat;
+  background-size: 100% 60px;
+  background-position-y: 40px;
+}
+header::after{
+  display: block;
+  position: absolute;
+  content: "";
+  top: 0;
+  background: var(--bg-color01);
+  height: 60px;
+  width: 100%;
+}
+header:hover{
+  background-image: url(../images/bg_header_ov.jpg);
+}
+header:hover .sub_bg,header:hover .sub{
+  display: block;
+}
+header > h1{
+  position:absolute;top:40px;
+  left:3%;
+  width:300px;
+  z-index: 9999;
+}
+header > h1 img{width:100%;}
+.gnb{
+  position:absolute;
+  top:50px;left:20%;
+  z-index: 10;
+}
+.sub_bg{
+  position: absolute;
+  width: 1000%;
+  height: 150px;
+  background: #fff;
+  left: -450px;
+  top: 50px;
+  z-index: 1;
+  display: none;
+}
+.gnb > ul{
+  display:flex;
+  justify-content: flex-end;
+  align-items: end;
+}
+.gnb > ul > li{
+  margin:0px 50px;
+  position:relative;/*sub의 기준*/
+  line-height:40px;
+}
+.gnb > ul > li::after{
+  position: absolute;
+  border-bottom: 2px solid #fff;
+  content: "";
+  display: block;
+  width: 0px;
+  transition: 0.3s;
+  top: 37px;
+}
+.gnb > ul > li:hover:after{
+  width: 60px;
+}
+.gnb > ul > li > a{
+  color:var(--f-color02);
+  font-size:var(--f-size02);
+}
+.gnb i.fa-angle-down{
+  transform:translateX(3px);
+}
+/* 서브메뉴서식 */
+.sub{
+  top: 60px;
+  width: 80px;
+  position:absolute;
+  z-index: 99999;
+  display:none;
+}
+.sub > li{ text-align:center;}
+.sub > li > a{
+  font-size:14px;
+  color:var(--f-color01);
+  transition:0.3s;
+  padding:2px 2px;
+  margin-left: -20px;
+  line-height:36px;
+  display:block;
+}
+.sub > li > a:hover{
+  background:#e22d0dc0;
+  color:var(--f-color02);
+}
+.search_box{
+ position: absolute;
+ right: -150px;
+ top: -30px;
+}
+.search_box>.search{
+  height: 25px;
+  background: none;
+  border: none;
+  border-bottom:2px solid rgb(75, 75, 75);
+  cursor: pointer;
+}
+.search_box>i.fa-solid{
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  font-size: 18px;
+  color: rgb(75, 75, 75);
+  cursor: pointer;
+}
+
+
+/* 푸터영역서식 */
+footer{
+  width:100%;
+  height:200px;
+  background:var(--bg-color02);
+  border-top:2px solid #727272;
+  color: #727272;
+  position: relative;
+  font-size: 14px;
+}
+footer::after{
+  display: block;
+  border-top:2px solid #727272;
+  position: absolute;
+  top: 45px;
+  content: "";
+  width: 100%;
+}
+.clear{
+  width: 1200px;
+  margin: 0 auto;
+}
+.clear .f_lnb ul{
+  display: flex;
+  line-height: 20px;
+  padding: 10px 0;
+}
+.clear .f_lnb ul li a{
+  margin: 0 20px;
+  color: #727272;
+}
+.clear .f_lnb ul li img{
+  position: relative;
+  top: 0px;
+}
+.clear .f_lnb ul li:after{
+  display: block;
+  content: "";
+  border-right:1px solid #727272;
+  height: 10px;
+  position: relative;
+  top: -15px;
+}
+.clear .f_lnb ul li:nth-child(4),.clear .f_lnb ul li:nth-child(6){
+  position: relative;
+  left: 330px;
+}
+.clear .f_lnb ul li:nth-child(4) a,.clear .f_lnb ul li:nth-child(6) a{
+  margin-left: -10px;
+}
+.clear .f_lnb ul li:nth-child(5) img,.clear .f_lnb ul li:nth-child(7) img{
+  left: 302px;
+}
+.clear .f_lnb ul li:nth-child(3)::after,.clear .f_lnb ul li:nth-child(4)::after,.clear .f_lnb ul li:nth-child(5)::after,.clear .f_lnb ul li:nth-child(6)::after,.clear .f_lnb ul li:last-child::after{
+  display: none;
+}
+.clear .f_lnb ul li:nth-child(3):after,.clear .f_lnb ul li:nth-child(5):after,.clear .f_lnb ul li:last-child:after{
+  border-right:2px solid #727272;
+  display: block;
+  content: "";
+  height: 48px;
+  position: relative;
+  top: -32px;
+  left: 300px;
+}
+.clear .f_lnb ul li:nth-child(5):after,.clear .f_lnb ul li:last-child:after{
+  top: -40px;
+  left: 300px;
+}
+.clear h2{
+  position: absolute;
+  top: 80px;
+  left: 370px;
+}
+.clear address{
+  font-style: normal;
+}
+.clear address p{
+  text-indent: 230px;
+  line-height: 30px;
+  position: relative;
+  top: -20px;
+}
+footer .t_btn{
+  position:fixed;
+  right:20px;bottom:70px;
+  z-index:2000;
+}
+.t_btn{display:none;}
