@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>광동제약 적응형 웹 모바일</title>
+  <!-- 초기화 -->
+  <link href="./css/reset.css" rel="stylesheet" type="text/css">
+  <!-- 기본서식 -->
+  <link href="./css/base.css" rel="stylesheet"  type="text/css">
+  <!-- 공통서식 -->
+  <link href="./css/m_common.css" rel="stylesheet" type="text/css">
+  <!-- 메인서식 -->
+  <link href="./css/m_main.css" rel="stylesheet" type="text/css">
+  <!-- <link href="./css/swiper.css" rel="stylesheet" type="text/css"> -->
+  <!-- 파비콘 -->
+  <link rel="icon" sizes="57x57" href="./images/pavicon.png">
+  <!-- 아이콘폰트 주소 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- 벤더프리픽스 -->
+  <script src="./script/prefixfree.min.js"></script>
+  <!-- 제이쿼리라이브러리 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <!-- 제이쿼리 ui -->
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script src="./script/m_main.js" defer></script>
+  <script src="./script/product.json" defer></script>
+</head>
+<body>
+  
+  <!-- 상단헤더영역 -->
+  <header>
+    <h1>
+      <a href="index.html" title="메인페이지로 바로가기">
+        <img src="./images/logo_mobile.png" alt="상단로고">
+      </a>
+    </h1>
+    <div class="toggle">
+      <span>&nbsp;</span>
+      <span>&nbsp;</span>
+      <span>&nbsp;</span>
+    </div>
+    <div class="seArch">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    <span class="search_box">
+      <input type="text" name="search" class="search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </span>
+    <nav class="gnb">
+      <ul>
+        <li><a href="#" title="광동제약">광동제약<i class="fas fa-angle-down"></i></a>
+          <ul class="sub">
+						<li><a href="#" title="회사소개">회사소개</a></li>
+						<li><a href="#" title="CEO 소개">CEO 소개</a></li>
+						<li><a href="#" title="오시는 길">오시는 길</a></li>
+					</ul>
+        </li>
+        <li><a href="#" title="제품소개">제품소개<i class="fas fa-angle-down"></i></a>
+          <ul class="sub">
+            <li><a href="#" title="일반의약품">일반의약품</a></li>
+            <li><a href="#" title="전문의약품">전문의약품</a></li>
+            <li><a href="#" title="원료의약품">원료의약품</a></li>
+					</ul>
+        </li>
+        <li><a href="#" title="홍보센터">홍보센터<i class="fas fa-angle-down"></i></a>
+          <ul class="sub">
+						<li><a href="#" title="영상광고">영상광고</a></li>
+						<li><a href="#" title="라디오광고">라디오광고</a></li>
+						<li><a href="#" title="프린터광고">프린터광고</a></li>
+					</ul>
+        </li>
+        <li><a href="#" title="미에로 이벤트">윤리경영<i class="fas fa-angle-down"></i></a>
+          <ul class="sub">
+            <li><a href="sub04_01.html" title="부패방지방침">부패방지방침</a></li>
+            <li><a href="sub04_02.html" title="윤리강령">윤리강령</a></li>
+        </ul>
+        </li>
+        <li><a href="#" title="공지사항">공지사항</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 메인영역 -->
+  <main>
+    <!-- 슬라이드 -->
+    <section id="visual_slide">
+      <h2>메인슬라이드</h2>
+      <div>
+          <span>내가 찍은 광고 영상이 비타500tv로<br> 온에어됩니다</span>
+          <img src="./images/visual_m01.jpg" alt="메인이미지01">
+      </div>
+      <div>
+        <span>광동 V라인<br>옥수수 수염차</span>
+        <img src="./images/visual_m02.jpg" alt="메인이미지02">
+      </div>
+      <div>
+        <span>광동 진한<br>헛개차 </span>
+        <img src="./images/visual_m03.jpg" alt="메인이미지03">
+      </div>
+      <div>
+        <span>골프에 최적화된 액티비티 드링크<br> 광동온더그린</span>
+        <img src="./images/visual_m04.jpg" alt="메인이미지04">
+      </div>
+<!--		 sns아이콘 -->
+      <ul class="sns">
+        <li><a href="#" title="facebook"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="#" title="instagram"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="#" title="youtube"><i class="fab fa-youtube"></i></a></li>
+      </ul>
+      <!--   		좌, 우 방향버튼 -->
+      <ul class="s_btn">
+        <li><img src="./images/left.png" alt="이전버튼"></li>
+        <li><img src="./images/right.png" alt="다음버튼"></li>
+      </ul>
+    <!--   		콘트롤버튼 -->
+        <ul class="ctrl_btn">
+          <li class="on">&nbsp;</li>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+        </ul>
+    </section>
+
+    <!-- 2. 뉴스 -->
+    <section id="new">
+      <article class="news">
+        <h2><span>건강은 생활의 감동</span> 광동제약®</h2>
+        <input type="radio" name="a" id="tab01" checked>
+        <label for="tab01"><img src="./images/menu01_on.png" alt="" class="s_big"></label>
+        <input type="radio" name="a" id="tab02">
+        <label for="tab02"><img src="./images/suyum_off.png" alt="" class="s_big"></label>
+        <input type="radio" name="a" id="tab03">
+        <label for="tab03"><img src="./images/hut_new_off.png" alt="" class="s_big"></label>
+        <input type="radio" name="a" id="tab04">
+        <label for="tab04"><img src="./images/onthe_off.png" alt="" class="s_big"></label>
+
+        <h2 class="h_02"><span>광동제약의 대표<br>상품들을 
+          만나 보세요!</span>광동제약 BEST</h2>
+        <div class="news_list01">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/v8DSuVfITMo?autoplay=1&mute=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="news_list02">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/oUZIfgasObQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="news_list03">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/oCnSOonktIs" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="news_list04">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/7F-CBbVzfoo" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </article>
+    </section>
+
+    <!-- 3. 탭콘텐츠 -->
+    <section id="tab_con">
+      <article class="tcon">
+        <h2 class="c_title">광동의 제품 컨셉</h2>
+        <ul>
+          <li>
+            <a href="#" title="" class="tab_on">비타 500<i class="fas fa-caret-down a01_on"></i></a>
+            <div class="cont"><span>비타 500의 컨셉</span>
+              많은 고민을 끝에 기존 과열 경쟁 시장인 레드오션(Red Ocean)을 피하고<br>
+              블루오션(Blue Ocean)으로 나아가게 되었습니다. 결국, 치열한 경쟁하는 방법 <br>
+              대신 창조적 사고를 통해 발견한 틈새시장에 출사표를 던졌으며, <br>
+              ‘마시는 비타민C’라는 기능성 드링크 비타500을 출시하게 되었습니다.
+              <img src="./images/img_info02n.png" alt="비타500"></div>
+          </li>
+          <li>
+            <a href="#" title="">옥수수 수염차<i class="fas fa-caret-down"></i></a>
+            <div class="cont"><span>옥수수 수염차의 컨셉</span>
+              옛 문헌에서 몸에 좋은 것으로 알려진 옥수수수염을 접한
+              광동제약 연구팀이 <br>
+              옥수수수염차를 개발하였으며,
+              전통적인 옥수수차의 구수한 맛과 <br>옥수수수염이 가미된 음료로
+              출시된 옥수수수염차에 대한 고객들의 반응은 <br>매우 뜨거웠으며,
+              특히 여성 고객층을 타켓으로 한 “V라인” 마케팅을<br> 통해 연일 매출 신기록을 경신하였습니다.
+              <img src="./images/img_oksusu01_new.png" alt="옥수수 수염차">
+            </div>
+          </li>
+          <li>
+            <a href="#" title="">헛개차<i class="fas fa-caret-down"></i></a>
+            <div class="cont"><span>헛개차의 컨셉</span>
+              헛개나무열매농축액을 주원료로 사용하여 음주 후 숙취해소에 탁월한 차음료입니다.<br>
+              헛개나무열매 특유의 구수한 향과 맛으로 남녀노소 누구나 <br>
+              즐길 수 있으며 대한민국 헛개소재 차음료의 No.1 제품입니다. (2018년 AC닐슨 기준)
+              <img src="./images/img_info01_n.png" alt="헛개차">
+              </div>
+          </li>
+          <li>
+            <a href="#" title="">광동 온핏<i class="fas fa-caret-down"></i></a>
+            <div class="cont"><span>광동온핏의 컨셉</span>
+              광동제약만의 60년 건강 노하우와 과학적인 설계로 탄생한 음료 브랜드,<br>
+              "On The"는 다양한 액티비티에 맞는 최적화된 가치를 추구합니다.
+              <img src="./images/onfit.jpg" alt="광동온핏">
+              </div>
+          </li>
+        </ul>
+      </article> 
+
+    </section>
+
+    <!-- 4. 제품소개 -->
+    <section id="product">
+      <article>
+        <h2 class="c_title">제품 패키지 소개</h2>
+        <ul>
+          <li><img src="./images/KakaoTalk_20220106_155015187-(2).png" alt="식이섬유">
+            <h3>광도르방</h3>
+            <p>돌하르방 모양의 병에 달코롬(달콤)한<br>
+              제주 감귤을 담은 비타500의<br>
+              제주지역 에디션 광도르방 제품입니다.</p>
+          </li>
+          <li><img src="./images/8350818849_l.png" alt="젤리">
+            <h3>석류콜라겐 젤리스틱</h3>
+            <p>하루 한포로 챙기는 건강한 습관<br>
+              이제는 석류 더 콜라겐으로<br>
+              아름다움을 챙기세요.</p>
+          </li>
+          <li><img src="./images/8010001425_main.png" alt="헬씨올리고">
+            <h3>진홍삼 프리미엄</h3>
+            <p>몸에 좋은 전통원료의 과학화, 현대화를 위해<br> 
+              오랜 시간 이어진 끊임 없는 연구와 노력<br> 
+              광동의 기술력을 토대로 제대로 만들었습니다.</p>
+          </li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- 5.  이벤트 -->
+    <section id="event">
+      <article class="econ">
+        <h2 class="c_title">광동제약 이벤트</h2>
+        <div class="e_slide">
+          <ul class="s_wrap">
+            <li class="slide-item">
+              <a href="#" title="광도르방 비타500"><img src="./images/slide-1.png" alt="슬라이드 배너"></a></li>
+            <li class="slide-item"><a href="#" title="제니 스티커 사진"><img src="./images/slide-2.png" alt="슬라이드 배너"></a></li>
+            <li class="slide-item"><a href="#" title="수지 비타500"><img src="./images/slide-3.png" alt="슬라이드 배너"></a></li>
+          </ul>
+          <i class="fas fa-angle-left"></i>
+          <i class="fas fa-angle-right"></i>
+          <div class="contRol_btn">
+            <span class="On">&nbsp;</span>
+            <span>&nbsp;</span>
+            <span>&nbsp;</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- 6. 갤러리 -->
+    <section id="gallery">
+			<article>
+				<h2>광동제약 Story</h2>
+				<div class="kwang">
+					<figure>
+				<a href="#none" title="영상보기">
+					<img src="./images/gall01.jpg" alt="광고사진">
+				</a>
+				<figcaption>
+					<a href="https://www.youtube.com/watch?v=k3PqOjxwTiI" target="_blank" title="영상보기">
+						<h6>TV광고</h6>
+						<p>2023</p>
+						<span>영상보기</span>
+					</a>
+				</figcaption>
+			</figure>
+			<figure>
+				<a href="#none" title="영상보기">
+					<img src="./images/gall02.jpg" alt="광고사진">
+				</a>
+				<figcaption>
+					<a href="https://www.youtube.com/watch?v=3DdjKij8cRU&embeds_euri=http%3A%2F%2Fwww.ekdp.com%2F&source_ve_path=MjM4NTE&feature=emb_titletitle=" target="_blank" title="영상보기">
+						<h6>TV광고</h6>
+						<p>2023</p>
+						<span>영상보기</span>
+					</a>
+				</figcaption>
+			</figure>
+				
+			<figure>
+				<a href="#none" title="영상보기">
+					<img src="./images/gall03.jpg" alt="광고사진">
+				</a>
+				<figcaption>
+					<a href="https://www.youtube.com/watch?v=sfcI-hv-xVc" target="_blank" title="영상보기">
+						<h6>TV광고</h6>
+						<p>2023</p>
+            <span>영상보기</span>
+					</a>
+				</figcaption>
+			</figure>
+				
+			<figure>
+				<a href="#none" title="영상보기">
+					<img src="./images/gall08.jpg" alt="광고사진">
+				</a>
+				<figcaption>
+					<a href="http://kdonthe.co.kr/test/#/start" target="_blank" title="영상보기">
+						<h6>오운완테스트</h6>
+						<p>2023</p>
+            <span>테스트하러가기</span>
+					</a>
+				</figcaption>
+			</figure>
+				
+			<figure>
+				<a href="#none" title="영상보기">
+					<img src="./images/gall04.jpg" alt="광고사진">
+				</a>
+				<figcaption>
+					<a href="https://www.youtube.com/watch?v=o9nP4G-q1HM&embeds_euri=http%3A%2F%2Fwww.ekdp.com%2F&source_ve_path=MjM4NTE&feature=emb_title" target="_blank" title="영상보기">
+						<h6>TV광고</h6>
+						<p>2023</p>
+            <span>영상보기</span>
+					</a>
+				</figcaption>
+			</figure>
+			<figure>
+				<a href="#none" title="영상보기">
+					<img src="./images/gall05.jpg" alt="광고사진">
+				</a>
+				<figcaption>
+					<a href="https://www.youtube.com/watch?v=GVzjP_Z_Ip8&embeds_euri=http%3A%2F%2Fwww.ekdp.com%2F&source_ve_path=MjM4NTE&feature=emb_title" target="_blank" title="영상보기">
+						<h6>TV광고</h6>
+						<p>2023</p>
+						<span>영상보기</span>
+					</a>
+				</figcaption>
+			</figure>
+					<figure>
+            <a href="#none" title="영상보기">
+					<img src="./images/gall06.jpg" alt="광고사진">
+				</a>
+				<figcaption>
+					<a href="https://www.youtube.com/watch?v=GqgkMHz7aHk&embeds_euri=http%3A%2F%2Fwww.ekdp.com%2F&source_ve_path=MjM4NTE&feature=emb_title" target="_blank" title="영상보기">
+						<h6>TV광고</h6>
+						<p>2023</p>
+						<span>영상보기</span>
+					</a>
+				</figcaption>
+			</figure>
+			<figure>
+				<a href="#none" title="영상보기">
+					<img src="./images/gall07.jpg" alt="광고사진">
+				</a>
+				<figcaption>
+					<a href="https://www.youtube.com/watch?v=OOKO7wWk2dg" target="_blank">
+						<h6>TV광고</h6>
+						<p>2023</p>
+						<span>영상보기</span>
+					</a>
+				</figcaption>
+			</figure>
+			<figure>
+				<a href="#none" title="영상보기">
+					<img src="#" alt="">
+				</a>
+				<figcaption>
+					<a href="https://www.youtube.com/watch?v=OOKO7wWk2dg" target="_blank" title="영상보기">
+						<h6>프로모션</h6>
+						<p>TV광고</p>
+						<span>영상보기</span>
+					</a>
+				</figcaption>
+			</figure>
+				</div>
+        
+        <p class="m_box">
+          <a href="#" title="더보기">더보기</a>
+        </p>
+        
+        <!-- 추가 갤러리 리스트 -->
+        <div id="list"></div>
+
+			</article>
+    </section>
+  </main>
+
+  <!-- 푸터영역 -->
+  <footer>
+    <a href="http://jjy981212.dothome.co.kr/kwangdong/index.html" title="pc버전보기" class="pc_v">PC버전보기</a>
+    <a href="#" title="위로 바로가기" class="t_btn">
+      <img src="./images/btn_top.png" alt="위로 바로가기">
+    </a>
+    <div class="f_inner clear">
+      <nav class="f_lnb">
+        <ul>
+          <li><a href="#" title="광동제약sns">광동제약 SNS<img src="./images/plus.png" alt="더보기"></a></li>
+          <li><a href="#" title="패밀리 사이트">패밀리 사이트<img src="./images/plus.png" alt="더보기"></a></li>
+        </ul>
+        <h2><a href="index.html" title="하단로고"><img src="./images/logo_gray_1.png" alt="푸터로고"></a></h2>
+        <ul>
+          <li><a href="#" title="개인정보 처리방침">개인정보 처리방침</a></li>
+          <li><a href="#" title="이메일무단수집거부">이메일무단수집거부</a></li>
+          <li><a href="#" title="공개입찰">공개입찰</a></li>
+        </ul>
+      </nav>
+      <address>
+        <p>COPYRIGHT&copy; KWANG DONG PHARMACEUTICAL CO.,LTD. ALL RIGHTS RESERVED</p>
+      </address>
+    </div>
+  </footer>
+  
+</body>
+</html>
