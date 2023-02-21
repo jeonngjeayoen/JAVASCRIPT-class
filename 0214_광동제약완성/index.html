@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>광동제약 반응형 웹</title>
+  <title>광동제약 적응형 웹</title>
   <!-- 초기화 -->
   <link href="./css/reset.css" rel="stylesheet" type="text/css">
   <!-- 기본서식 -->
@@ -13,7 +13,6 @@
   <link href="./css/common.css" rel="stylesheet" type="text/css">
   <!-- 메인서식 -->
   <link href="./css/main.css" rel="stylesheet" type="text/css">
-  <link href="./css/swiper.css" rel="stylesheet" type="t ext/css">
   <!-- 파비콘 -->
   <link rel="icon" sizes="57x57" href="./images/pavicon.png">
   <!-- 아이콘폰트 주소 -->
@@ -26,6 +25,20 @@
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
   <script src="./script/main.js" defer></script>
   <script src="./script/product.json" defer></script>
+  <script>
+    let mobile = ['Android', 'iPhone', 'iPad', 'SAMSUNG', 'Blackberry', 'Window CE', 'MOT', 'SonyErisson', 'Nokia', 'vivo', 'Xiaomi'];
+    //만약에 위 배열 값 개수만큼 반복하여 사용자가 접속한 스마트폰의 종류를 체크하여 맞다면 아래 내용을 실행한다.
+    if(document.URL.match('move_pc_screen')) mobile = null;
+    for(let i in mobile){ //in 키워드 값이 있으면 true, 없으면 false
+      if(navigator.userAgent.match(mobile[i]) != null){ //일치하는게 있으면
+        location.href='http://jjy981212.dothome.co.kr/m_kwandong/mindex.html'; //모바일로 접속한다.
+        break;
+      }
+    }
+
+    //모바일에서 pc보기를 클릭해서 다시 pc페이지가 보이게
+
+  </script>
 </head>
 <body>
   <!-- 상단헤더영역 -->
@@ -270,15 +283,14 @@
       <article class="g_con grid">
         <h2 class="c_title">광동제약 Story</h2>
         <ul class="gallery">
-          <li class="item"><span>TV광고<span class="years">2023</span><a href="https://www.youtube.com/watch?v=k3PqOjxwTiI" target="_blank">영상보기</a></span></li>
-          <li class="item"><span>TV광고<span class="years">2023</span><a href="https://www.youtube.com/watch?v=3DdjKij8cRU&embeds_euri=http%3A%2F%2Fwww.ekdp.com%2F&source_ve_path=MjM4NTE&feature=emb_title" target="_blank">영상보기</a></span></li>
-          <li class="item"><span>TV광고<span class="years">2023</span><a href="https://www.youtube.com/watch?v=sfcI-hv-xVc" target="_blank">영상보기</a></span></li>
-          <li class="item"><span>오운완이벤트<span class="years">2023</span><a href="http://kdonthe.co.kr/test/#/start" target="_blank">테스트하기</a></span></li>
-          <li class="item"><span>TV광고<span class="years">2023</span><a href="https://www.youtube.com/watch?v=o9nP4G-q1HM&embeds_euri=http%3A%2F%2Fwww.ekdp.com%2F&source_ve_path=MjM4NTE&feature=emb_title" target="_blank">영상보기</a></span></li>
-          <li class="item" target="_blank"><span>TV광고<span class="years">2023</span><a href="https://www.youtube.com/watch?v=GVzjP_Z_Ip8&embeds_euri=http%3A%2F%2Fwww.ekdp.com%2F&source_ve_path=MjM4NTE&feature=emb_title" target="_blank">영상보기</a></span></li>
-          <li class="item"><span>TV광고<span class="years">2023</span><a href="https://www.youtube.com/watch?v=GqgkMHz7aHk&embeds_euri=http%3A%2F%2Fwww.ekdp.com%2F&source_ve_path=MjM4NTE&feature=emb_title" target="_blank">영상보기</a></span></li>
-          <li class="item"><span>TV광고<span class="years">2023</span><a href="https://www.youtube.com/watch?v=ZAEsjCyuq5I" target="_blank">영상보기</a></span></li>
-          <li class="item"><span>TV광고<span class="years">2023</span><a href="https://www.youtube.com/watch?v=OOKO7wWk2dg&embeds_euri=http%3A%2F%2Fwww.ekdp.com%2F&source_ve_path=MjM4NTE&feature=emb_title" target="_blank">영상보기</a></span></li>
+          <li class="item"><span>TV광고<span class="years">2023</span><a href="https://www.youtube.com/watch?v=k3PqOjxwTiI" target="_blank" title="영상보기">영상보기</a></span></li>
+          <li class="item"><span>TV광고<span class="years">2023</span><a href="https://www.youtube.com/watch?v=3DdjKij8cRU&embeds_euri=http%3A%2F%2Fwww.ekdp.com%2F&source_ve_path=MjM4NTE&feature=emb_title title=" target="_blank" title="영상보기">영상보기</a></span></li>
+          <li class="item"><span>TV광고<span class="years">2023</span><a href="https://www.youtube.com/watch?v=sfcI-hv-xVc" target="_blank" title="영상보기">영상보기</a></span></li>
+          <li class="item"><span>오운완이벤트<span class="years">2023</span><a href="http://kdonthe.co.kr/test/#/start" target="_blank" title="영상보기">테스트하기</a></span></li>
+          <li class="item"><span>TV광고<span class="years">2023</span><a href="https://www.youtube.com/watch?v=o9nP4G-q1HM&embeds_euri=http%3A%2F%2Fwww.ekdp.com%2F&source_ve_path=MjM4NTE&feature=emb_title" target="_blank" title="영상보기">영상보기</a></span></li>
+          <li class="item" target="_blank"><span>TV광고<span class="years">2023</span><a href="https://www.youtube.com/watch?v=GVzjP_Z_Ip8&embeds_euri=http%3A%2F%2Fwww.ekdp.com%2F&source_ve_path=MjM4NTE&feature=emb_title" target="_blank" title="영상보기">영상보기</a></span></li>
+          <li class="item"><span>TV광고<span class="years">2023</span><a href="https://www.youtube.com/watch?v=GqgkMHz7aHk&embeds_euri=http%3A%2F%2Fwww.ekdp.com%2F&source_ve_path=MjM4NTE&feature=emb_title" target="_blank" title="영상보기">영상보기</a></span></li>
+          <li class="item"><span>TV광고<span class="years">2023</span><a href="https://www.youtube.com/watch?v=OOKO7wWk2dg" target="_blank">영상보기</a></span></li>
         </ul>
         <p class="m_box">
           <a href="#" title="더보기">더보기</a>
@@ -304,7 +316,7 @@
         </ul>
       </nav>
       <a href="#" title="위로 바로가기" class="t_btn">
-        <img src="./images/top_up.png" alt="위로 바로가기">
+        <img src="./images/btn_top.png" alt="위로 바로가기">
       </a>
       <address>
         <h2><a href="index.html" title="하단로고"><img src="./images/logo_gray 1.png" alt="푸터로고"></a></h2>

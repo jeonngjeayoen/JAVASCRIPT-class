@@ -8,7 +8,10 @@ section:not(#visual_slide){
   background: #f8f5f5;}
 #visual_slide img{transform:scale(1.08)};
 #visual_slide > h2{display:none;}
-#visual_slide div{position:relative}
+#visual_slide div{position:relative;}
+#visual_slide div:first-of-type{z-index:10;}
+#visual_slide div:nth-of-type(2){z-index:9;}
+#visual_slide div:last-of-type{z-index:8;}
 #visual_slide span{
   display: none;
 }
@@ -47,6 +50,7 @@ section:not(#visual_slide){
   position:absolute;
   top:70%;left:3%;
   display: flex;z-index:20;
+  cursor: pointer;
 }
 .s_btn > li:first-child{
   margin-left: 6px;
@@ -299,7 +303,7 @@ label[for=tab04]{
   z-index: 100;
   text-align: center;
   position: absolute;
-  top:500px;
+  top:520px;
 }
 .contRol_btn span{
   display: inline-block;
@@ -448,9 +452,10 @@ label[for=tab04]{
   color: #464646;
   font-weight: bold;
   transition: 0.3s;
+  background: #fff;
 }
 .m_box a:hover{
-  background: var( --bg-color01);
+  background: #000;
   color: #fff;
   border: none;
 }
@@ -462,7 +467,7 @@ label[for=tab04]{
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(2, 195px);
   position: relative;
-  top: -89px;
+  top: -70px;
 }
 #list ul img{
   width: 100%;
@@ -482,12 +487,12 @@ label[for=tab04]{
   z-index: 1;
   bottom: 90px;
   opacity: 0;
-  transform: translateY(200px);
+  transform: translateY(100px);
   transition: 0.5s;
 }
 #list li>span>span:first-child{
   position: relative;
-  top: 160px;
+  top: 260px;
   left: 20px;
   height: 100px;
   transition: 0.5s;
@@ -500,18 +505,23 @@ label[for=tab04]{
   z-index: 99999;
 }
 #list li>span>span:nth-child(2){
-  top: 190px;
+  top: 290px;
   position: relative;
-  left: -30px;
+  left: -33px;
   font-size: 15px;
   color: #fff;
   font-weight: normal;
   z-index: 99999;
-}
-#list li>span>span{
+  transition: 0.5s;
   opacity: 0;
-  transform: translateY(200px);
-  transition: 0.3s;
+}
+#list li>span:hover>span:nth-child(2){
+  opacity: 1;
+  top: 190px;
+}
+#list li>span:hover>span:first-child{
+  opacity: 1;
+  top: 160px;
 }
 #list li>span:hover>span{
   opacity: 1;
